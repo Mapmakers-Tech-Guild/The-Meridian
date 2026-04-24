@@ -1,12 +1,19 @@
-# Company knowledge base (org-vault style pattern)
+# Company knowledge base (org-vault style) vs Mapmakers
 
-Some orgs use a **work-OneDrive** knowledge tree (e.g. `03-Ops\knowledgebase\` with company onboarding, SOPs, and Microsoft-tenant notes). **Mapmakers** does not live there — this **Mapmakers-Knowledgebase** repo is the guild’s shared store.
+**a work org / work-style** trees often look like: **`03-Ops\knowledgebase\`**, with **`00 - Housekeeping\`** (templates, import staging mirrors, housekeeping), **`New Employee Onboarding\`**, **operations** runbooks, and an **archive** or cold area — plus **.gitignore** so private paths do not get committed. *Your* relay/ENTER_HERE docs are the real contract; this is only an analogy.
 
-**When you have both:**
+**Mapmakers-Knowledgebase** in *this* repo is **not** the company tenant KB. It mirrors the *shape* where it helps:
 
-- **Company KB** = policy, employment, customer-tenant work.  
-- **This repo** = Mapmakers / guild craft, Egregore interop, shared personas — [../Egregore/VS-SHARED-KB.md](../Egregore/VS-SHARED-KB.md).
+| IA / org pattern (typical) | Mapmakers (this repo) |
+| --- | --- |
+| `0` / `00` Housekeeping | [0 - Housekeeping/](../README.md) |
+| People, HR-facing lists | [1 - People/](../../1%20-%20People/) — **humans only** |
+| Projects, delivery | [2 - Projects/](../../2%20-%20Projects/) |
+| Domain knowledge, patterns | [3 - Knowledge/](../../3%20-%20Knowledge/) |
+| — | [4 - Guild/](../../4%20-%20Guild/) — **ops** includes **agent** [persona packs](../../4%20-%20Guild/ops/personas/) |
+| **Operations** (SOPs, how the org runs) | [5 - Operations/](../../5%20-%20Operations/) |
+| **Archive** (superseded, cold) | [6 - Archive/](../../6%20-%20Archive/) |
 
-**Cross-context / personal relay** (if you use it) stays in **your** private tree, not in this repo — same *membrane* idea as relay docs: *location* is often the boundary when work and personal OneDrive don’t “ignore” folders like `.gitignore`.
+**When you have both a company KB and this repo:** company = policy, employment, customer-tenant. Mapmakers = **guild** craft, [Egregore interop](../Egregore/INTEROP.md), and shared *team* content only.
 
 [IA routing](./kb-ia-routing.md) · [NAV](../NAV.md)

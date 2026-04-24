@@ -1,9 +1,10 @@
 # 4 — Guild
 
-Guild **operations** and **agent** context that are not a single “persona” in **1 — People** (e.g. *firefly* how-to, playbooks).
+Guild structure, **operations**, and **ops-side agent packs** (not the human roster in **1 — People**).
 
-| Doc | Use |
+| Path | Use |
 | --- | --- |
-| [agent-personas.md](./agent-personas.md) | Firefly, guild agent context vs Egregore |
+| [ops/](./ops/) | Guild ops: **personas for agents**, SOPs for bots/automation, runbooks you add |
+| (you can add) | `playbooks/`, `on-call.md`, etc. |
 
-[Personas (1 — People)](../1%20-%20People/README.md) · [0 — Housekeeping / Egregore](../0%20-%20Housekeeping/Egregore/README.md) · [NAV](../0%20-%20Housekeeping/NAV.md) · [Repo entrypoint](../README.md)
+[1 — People](../1%20-%20People/README.md) (humans) · [5 — Operations](../5%20-%20Operations/README.md) · [NAV](../0%20-%20Housekeeping/NAV.md) · [Repo entrypoint](../README.md)

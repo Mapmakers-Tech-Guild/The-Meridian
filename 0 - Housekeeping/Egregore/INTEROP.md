@@ -15,7 +15,8 @@ A **publications** export is separate — see [../Publication/PUBLICATION-AND-RE
 | `3 - Knowledge/…` findings | `knowledge/findings/…` | |
 | `0 - Housekeeping/Guides/*` or long writeups | `artifacts/…` or `knowledge/patterns/*` | One canonical home. |
 | `2 - Projects/*` | `projects/*.md` | |
-| `1 - People/Personas/*` | Summarize to **`people/{github}.md`** | No `personas/` in `memory/`. |
+| `1 - People/*.md` (humans) | Summarize to **`people/{github}.md`** as needed | No duplicate `personas/` tree in `memory/`. |
+| `4 - Guild/ops/personas/*` (agent packs) | **Do not** create `ops/` in Egregore — distil facts into `people/{github}.md` or a pattern note. |
 | `infrastructure` (if you add) | `infrastructure/` | No secrets. |
 | — | `handoffs/`, `wraps/`, `quests/`, `meetings/`, `research/` | Egregore-native; private record stays in memory. |
 

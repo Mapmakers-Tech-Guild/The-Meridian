@@ -2,11 +2,13 @@
 
 | # | Area | What lives there |
 | --- | --- | --- |
-| **0** | [Housekeeping](./README.md) | Nav, Egregore interop, IA / membranes, publication protocol, **templates** (Zettel + Mapmakers), guides |
-| **1** | [People](../1%20-%20People/README.md) | Personas and guild-facing dossiers |
-| **2** | [Projects](../2%20-%20Projects/README.md) | Project blurbs, links, shared context |
-| **3** | [Knowledge](../3%20-%20Knowledge/README.md) | Patterns, evergreen notes (Zettel “paths” / ideas) |
-| **4** | [Guild](../4%20-%20Guild/README.md) | Agent personas, firefly, guild-only guides |
+| **0** | [Housekeeping](./README.md) | Nav, Egregore, IA / membranes, publication, **templates**, guides |
+| **1** | [People](../1%20-%20People/README.md) | **Humans** (one file per person) |
+| **2** | [Projects](../2%20-%20Projects/README.md) | Project blurbs, links |
+| **3** | [Knowledge](../3%20-%20Knowledge/README.md) | Patterns, evergreen Zettel-style ideas |
+| **4** | [Guild](../4%20-%20Guild/README.md) | Guild structure; **[ops/](../4%20-%20Guild/ops/)** = **agent persona packs** (not the human roster) |
+| **5** | [Operations](../5%20-%20Operations/README.md) | Runbooks, SOPs, *how the guild runs* (org-vault style ops) |
+| **6** | [Archive](../6%20-%20Archive/README.md) | Superseded, cold, migrated-out material |
 
 ## Quick links (0 — Housekeeping)
 
@@ -16,8 +18,8 @@
 | Shared KB → Egregore `memory/` | [Egregore/INTEROP.md](./Egregore/INTEROP.md) |
 | Old filename redirect | [Egregore/VS-OPEN-REDIRECT.md](./Egregore/VS-OPEN-REDIRECT.md) |
 | Membranes & Git visibility | [Membranes/BRANCHES-AND-PUBLISHING.md](./Membranes/BRANCHES-AND-PUBLISHING.md) |
-| Personal / work / company (no paths) | [IA/kb-ia-routing.md](./IA/kb-ia-routing.md) |
-| Company-KB pattern (org-vault style) | [IA/company-knowledge-pointer.md](./IA/company-knowledge-pointer.md) |
+| Personal / work / company | [IA/kb-ia-routing.md](./IA/kb-ia-routing.md) |
+| Company-KB pattern (IA) | [IA/company-knowledge-pointer.md](./IA/company-knowledge-pointer.md) |
 | Publication & export | [Publication/PUBLICATION-AND-RELEASE.md](./Publication/PUBLICATION-AND-RELEASE.md) |
 | How to use this tree | [Guides/how-to-use-shared-kb.md](./Guides/how-to-use-shared-kb.md) |
 | Templates | [Templates/README.md](./Templates/README.md) |

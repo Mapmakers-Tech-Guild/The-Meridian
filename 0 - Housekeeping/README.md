@@ -1,13 +1,13 @@
 # 0 — Housekeeping
 
-This area holds **navigation**, **cross-cutting docs** (Egregore, org-vault style membranes, publication), **templates** (including Zettel-style), and **guides** — the same role as `0 - Housekeeping` in a personal Zettelkasten vault, adapted for the **Mapmakers Tech Guild** shared repo.
+Navigation, cross-cutting docs (Egregore, org-vault style membranes, publication), **templates** (Zettel-style), and **guides** — same *role* as `0 - Housekeeping` / `00 - Housekeeping` in org KBs (including a work org–style company trees), adapted for **Mapmakers**.
 
-- **NAV (full map):** [NAV.md](./NAV.md)  
-- **Egregore (private mind vs this repo):** [Egregore/](./Egregore/)  
-- **IA / work / company context** (no machine paths): [IA/kb-ia-routing.md](./IA/kb-ia-routing.md)  
+- **NAV:** [NAV.md](./NAV.md)  
+- **Egregore:** [Egregore/](./Egregore/)  
+- **IA / membranes:** [IA/kb-ia-routing.md](./IA/kb-ia-routing.md) · [IA/company-knowledge-pointer.md](./IA/company-knowledge-pointer.md)  
 - **Templates:** [Templates/](./Templates/)  
 - **How to use:** [Guides/how-to-use-shared-kb.md](./Guides/how-to-use-shared-kb.md)
 
-**Other top-level areas:** [1 - People](../1%20-%20People/README.md) · [2 - Projects](../2%20-%20Projects/README.md) · [3 - Knowledge](../3%20-%20Knowledge/README.md) · [4 - Guild](../4%20-%20Guild/README.md)
+**Numbered areas:** [1 - People](../1%20-%20People/) · [2 - Projects](../2%20-%20Projects/) · [3 - Knowledge](../3%20-%20Knowledge/) · [4 - Guild](../4%20-%20Guild/) · [5 - Operations](../5%20-%20Operations/) · [6 - Archive](../6%20-%20Archive/)
 
 Return to [repo entrypoint](../README.md).

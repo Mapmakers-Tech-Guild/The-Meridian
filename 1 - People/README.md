@@ -1,12 +1,13 @@
 # 1 — People
 
-**Guild-facing personas** and dossiers. One folder per person under **`Personas/`** with an `index.md`.  
-Egregore’s **canonical** short profile is still `people/{github}.md` in the **private** `the-mapper-s-ego-memory` — see [0 - Housekeeping / Egregore / INTEROP](../0%20-%20Housekeeping/Egregore/INTEROP.md).
+**Humans** only — one markdown file per person. No “personas” here; those live under **[4 - Guild / ops / personas/](../4%20-%20Guild/ops/personas/)** for **guild / agent** use.
 
-| Persona | Link |
+| Who | File |
 | --- | --- |
-| Elryan Dalren | [Personas/elryan-dalren/](./Personas/elryan-dalren/) |
-| Josh Field | [Personas/josh-field/](./Personas/josh-field/) |
-| Christina Bowen | [Personas/christina-bowen/](./Personas/christina-bowen/) |
+| Elryan Dalren | [elryan-dalren.md](./elryan-dalren.md) |
+| Josh Field | [josh-field.md](./josh-field.md) |
+| Christina Bowen | [christina-bowen.md](./christina-bowen.md) |
 
-[Personas index](./Personas/README.md) · [NAV](../0%20-%20Housekeeping/NAV.md) · [0 — Housekeeping](../0%20-%20Housekeeping/README.md) · [Repo entrypoint](../README.md)
+Egregore’s canonical `people/{github}.md` stays in private memory — [INTEROP](../0%20-%20Housekeeping/Egregore/INTEROP.md).
+
+[NAV](../0%20-%20Housekeeping/NAV.md) · [0 — Housekeeping](../0%20-%20Housekeeping/README.md) · [Repo entrypoint](../README.md)
