@@ -1,9 +1,5 @@
-# Public projects (open KB)
+# Shared project context (this repo)
 
-Short blurbs, links, and how outsiders can help. **No** Egregore-only secrets.
+Short blurbs and links the guild can rely on. **Not** a substitute for private Egregore `projects/` if the detail is ops-only.
 
-| Project | Public link / repo | Notes |
-| --- | --- | --- |
-| (add rows) | | |
-
-Egregore tracks private operational detail in the memory repository separately.
+**Publication:** if you copy any of this to a separate public or vault-snippets repo, apply [PUBLICATION-AND-RELEASE.md](../PUBLICATION-AND-RELEASE.md) so cross-links resolve or are redacted.

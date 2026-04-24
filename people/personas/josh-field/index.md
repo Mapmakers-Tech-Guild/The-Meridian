@@ -3,14 +3,14 @@ title: Josh Field — public persona
 slug: josh-field
 kind: guild-persona
 updated: 2026-04-24
-visibility: public-draft
+visibility: shared-draft
 sources:
   - import staging 20260330_133236, 20260330_234530 (private machine; summaries)
 ---
 
 # Josh Field
 
-**Open** KB note — not a substitute for private Egregore entries if the project uses them for Josh.
+**Shared** KB note — not a substitute for private Egregore entries if the project uses them for Josh.
 
 ## Summarized from private import staging (verify before relying on)
 

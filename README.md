@@ -1,27 +1,26 @@
-# Mapmakers open knowledge base
+# Mapmakers shared knowledge base
 
-**Home folder:** `C:\Users\IOX20\OneDrive\Mapmakers-Knowledgebase` — **this** git repo is the only home for this content. Remote: [Mapmakers-Tech-Guild/Mapmakers-Knowledgebase](https://github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase).
-
-**Not** the Egregore private memory. Read **[EGREGORE-VS-OPEN-KB.md](./EGREGORE-VS-OPEN-KB.md)** first if you use Claude Code + `the-mapper-s-ego` so you do not conflate the two.
+**This repository** — [Mapmakers-Tech-Guild/Mapmakers-Knowledgebase](https://github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase) — is the **shared** knowledge base for the guild (patterns, guides, personas, project context). It is **not** the Egregore private `memory/` tree; it is **not** the same as a **publications** or **vault-snippets** repo (those are or will be separate; see [PUBLICATION-AND-RELEASE.md](./PUBLICATION-AND-RELEASE.md)).
 
 ## Start here
 
-1. **Boundary** — Egregore `memory` = [private shared mind for the org + tooling](EGREGORE-VS-OPEN-KB.md). This tree = [membranes, branches, and publishing](MEMBRANES-BRANCHES-AND-PUBLISHING.md).
-2. **Interop (open → Egregore)** — [EGREGORE-INTEROP.md](./EGREGORE-INTEROP.md) — copy from here into the private `memory/` repo using **only** Egregore-mandated paths.
-3. **Membranes** — [kb-ia-routing.md](./kb-ia-routing.md) (if you use a work org, work OneDrive, or a private relay on your own machine).
-4. **Guild agent personas (firefly)** — [guild/agent-personas.md](./guild/agent-personas.md) and [people/personas/](./people/personas/) — *public-safe* notes only.
+1. **Boundary** — Egregore `memory` vs this repo: [EGREGORE-VS-SHARED-KB.md](./EGREGORE-VS-SHARED-KB.md) (old link: [EGREGORE-VS-OPEN-KB.md](./EGREGORE-VS-OPEN-KB.md)).  
+2. **Interop (shared → Egregore private memory)** — [EGREGORE-INTEROP.md](./EGREGORE-INTEROP.md).  
+3. **Publication / future automation** — [PUBLICATION-AND-RELEASE.md](./PUBLICATION-AND-RELEASE.md) — frontmatter, bundles, **link closure**, redaction when exporting outside this repo.  
+4. **Membranes** (personal, work, company) — [kb-ia-routing.md](./kb-ia-routing.md) (no machine paths; generic roles only).  
+5. **Guild agent personas (firefly)** — [guild/agent-personas.md](./guild/agent-personas.md), [people/personas/](./people/personas/).  
+6. **Branch visibility** (when a repo is public) — [MEMBRANES-BRANCHES-AND-PUBLISHING.md](./MEMBRANES-BRANCHES-AND-PUBLISHING.md).
 
-## Layout (open KB, not the Egregore `memory/` mirror)
+## Layout (this repo, not a mirror of Egregore `memory/`)
 
 | Path | Purpose |
 | --- | --- |
-| [guides/](./guides/) | How to use this KB, contribution norms |
-| [knowledge/patterns/](./knowledge/patterns/) | Evergreen, publishable patterns |
-| [knowledge/](./knowledge/) | Decisions *you choose to make public* (rare; most stay in Egregore) |
-| [people/personas/](./people/personas/) | Person folders + `index.md` (no PII) |
-| [projects/](./projects/) | Public project blurbs, links |
-| [templates/](./templates/) | Scaffolds and bridges |
-| [kb-ia-routing.md](./kb-ia-routing.md) | Membranes (personal / Egregore / this KB / company) |
-| [EGREGORE-INTEROP.md](./EGREGORE-INTEROP.md) | **This KB → Egregore `memory/`** path map |
+| [guides/](./guides/) | How to use, norms |
+| [knowledge/patterns/](./knowledge/patterns/) | Evergreen shared patterns |
+| [knowledge/](./knowledge/) | Optional; rare shared decisions you also want in-repo |
+| [people/personas/](./people/personas/) | Person `index.md` (redact as required) |
+| [projects/](./projects/) | Shared project context |
+| [templates/](./templates/) | Staging → shared, patterns, frontmatter |
+| [PUBLICATION-AND-RELEASE.md](./PUBLICATION-AND-RELEASE.md) | Release / export / link-interop ideation |
 
-Egregore’s internal tree stays in **`the-mapper-s-ego-memory`**, not duplicated here, except what you copy over on purpose.
+Private Egregore state stays in **`the-mapper-s-ego-memory`** except what you copy on purpose per [EGREGORE-INTEROP.md](./EGREGORE-INTEROP.md).

@@ -1,26 +1,22 @@
-# Membranes, branches, and what GitHub can (and can’t) hide
+# Membranes, branches, and what hosts can (and can’t) hide
 
 ## The “private branch” question
 
-On **GitHub / GitLab / most hosts**, if the **repository** is **public**, then **every branch, tag, and the full object database** is generally visible. There is **no** supported “this branch is private, that branch is public” on a single public repo. Anyone can `git fetch` a branch name they guess.
+If a **repository** is **public** on GitHub / GitLab, **all branches** on that remote are generally visible. There is no first-class “private branch on a public repo.”
 
-So: **branch per project, merge to `main` when ready** is a great **workflow** (review, CI, feature isolation). It is **not** a secrecy membrane for a public remote.
+**Branch per topic** is good for **review and merge**; it is not a substitute for a **private** repository when drafts must stay internal.
 
-## What actually enforces a membrane
+## What enforces a real membrane
 
 | Need | Pattern |
 | --- | --- |
-| **Drafts must stay private** | **Private repository** (or uncommitted local work) until you intentionally publish. |
-| **One day open** | New **public** repo, or `main` in a new public repo, and copy/merge only reviewed files; or use a **static site** build that only uploads `public/`. |
-| **Team-only vs world** | **Private** org repo (Egregore memory) vs **public** KB repo, not two branch “zones” in one public repo. |
-| **You** keep writing in one place for convenience | [Obsidian/ local folder] **excluded** from the public remote via not pushing it, or a **submodule** / build step that only promotes chosen paths. |
+| **Drafts private** | Private repository, or no push. |
+| **Share with guild only** | This Mapmakers shared KB — org repo visibility is your choice. |
+| **External / publication** | **Separate** publications or vault-snippets repo, or per-project publish repos — [PUBLICATION-AND-RELEASE.md](./PUBLICATION-AND-RELEASE.md). |
+| **Egregore operations** | Private `the-mapper-s-ego-memory` only. |
 
-## Branch-per-project (still useful)
+## Egregore vs this shared KB vs publication
 
-- `project/xyz` for a batch of related docs, **PR into `main`** when the narrative is review-ready.  
-- Works for **public** repo hygiene and review — just assume **anything pushed** to a public remote could be read.
-
-## Egregore vs public KB (again)
-
-- **Egregore memory** = private shared mind; keep the upstream folder contract intact.  
-- **This knowledge base** = open; merge story here is about **quality and release**, not hiding work from a public `git clone` — because when the KB lives in a **public** remote, the whole thing is the product.
+- **Egregore `memory/`** — private shared mind; folder contract from upstream.  
+- **This repository** — **shared** knowledge base; not the same as a dedicated **export** line.  
+- **Public or semi-public bundles** — own release process, **link closure** and **redaction** so internal wikilinks do not break when only part of the tree ships.

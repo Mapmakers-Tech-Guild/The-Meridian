@@ -3,13 +3,14 @@ type: finding
 author: handle
 created: YYYY-MM-DD
 confidence: medium
-visibility: public
+audience: shared
+status: draft
 ---
 
 # Title
 
-**Claim (safe to publish):**
+**Claim (review for export before an external audience):**
 
 **Evidence (summarized):**
 
-**Implications for readers (public):**
+**Implications:**

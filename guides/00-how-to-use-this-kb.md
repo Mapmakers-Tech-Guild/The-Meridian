@@ -1,8 +1,8 @@
-# How to use this open knowledge base
+# How to use the shared knowledge base
 
-1. This repo (`Mapmakers-Knowledgebase`) is the **only** home for this public KB. **Do not** put these files inside the Egregore `memory` symlink — that stays the **private** `the-mapper-s-ego-memory` tree.
-2. Read [EGREGORE-VS-OPEN-KB.md](../EGREGORE-VS-OPEN-KB.md). To pull public material **into** Egregore, use [EGREGORE-INTEROP.md](../EGREGORE-INTEROP.md) and only write into mandated `memory/` paths.
-3. For publishing workflow and branch visibility, read [MEMBRANES-BRANCHES-AND-PUBLISHING.md](../MEMBRANES-BRANCHES-AND-PUBLISHING.md).
-4. Add or edit `knowledge/patterns/`, `people/personas/`, and `projects/` for content you are willing to be **public** after redaction.
+1. This **Mapmakers-Knowledgebase** repository is the **shared** store for durable guild material. The Egregore **private** `memory/` tree is separate — see [EGREGORE-VS-SHARED-KB.md](../EGREGORE-VS-SHARED-KB.md).  
+2. **Public or external** outputs (publications, vault snippets) are **not** this repo by default; plan them in [PUBLICATION-AND-RELEASE.md](../PUBLICATION-AND-RELEASE.md) and add a **separate** repo or per-project publish repo when you are ready.  
+3. To copy from here **into** Egregore, follow [EGREGORE-INTEROP.md](../EGREGORE-INTEROP.md) and only use mandated `memory/` paths.  
+4. Edit [knowledge/patterns/](../knowledge/patterns/), [people/personas/](../people/personas/), and [projects/](../projects/) for **shared** content; use frontmatter to mark `status` / `audience` if you want to drive future export automation per [PUBLICATION-AND-RELEASE.md](../PUBLICATION-AND-RELEASE.md).
 
-Egregore (`/handoff`, etc.) writes to **`the-mapper-s-ego-memory`**, not this repo.
+Egregore (`/handoff`, etc.) writes to **private** memory, not to this repository.

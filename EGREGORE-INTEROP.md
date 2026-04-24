@@ -1,40 +1,42 @@
-# Interop: open KB → Egregore `memory/`
+# Interop: shared knowledge base → Egregore `memory/`
 
-**Direction:** You can **pull** anything from this **open** `knowledgebase/` into the **private** Egregore memory repository (`the-mapper-s-ego-memory`, symlinked as `memory/` in `the-mapper-s-ego`). The **only** rule: the destination must stay the **standard Egregore `memory/` layout** — do not invent new top-level folders in the memory repo; use the table below.
+**Direction:** You can **copy** material **from** this **shared** Mapmakers knowledge base **into** the **private** Egregore memory repository (`the-mapper-s-ego-memory`, symlinked as `memory/` in `the-mapper-s-ego`). The destination must stay the **standard Egregore `memory/` layout** — do not add nonstandard top-level folders; use the table.
 
-**Paths (on a machine with both checkouts):**
+**Repositories:**
 
-- **This open KB (only canonical location):** e.g. `C:\Users\IOX20\OneDrive\Mapmakers-Knowledgebase` — same as this git repo, or a clone of [Mapmakers-Knowledgebase](https://github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase) anywhere you like.
-- **Egregore memory (private):** e.g. `the-mapper-s-ego-memory\` (repo named in `egregore.json` → `memory_repo`, symlinked as `the-mapper-s-ego\memory\`).
+- **This shared KB:** this git repo — [Mapmakers-Tech-Guild/Mapmakers-Knowledgebase](https://github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase) (any clone is fine; no canonical path on disk in docs).  
+- **Egregore memory (private):** the repo in `egregore.json` → `memory_repo`, usually checked out with `the-mapper-s-ego` and exposed as the `memory/` path.
+
+A future **publications** or per-project export repo is **out of scope** for this interop file — see [PUBLICATION-AND-RELEASE.md](./PUBLICATION-AND-RELEASE.md).
 
 ## Path map (source → destination)
 
-| Open KB source | Egregore `memory/` destination | Notes |
+| Shared KB source | Egregore `memory/` destination | Notes |
 | --- | --- | --- |
-| `knowledge/patterns/*.md` | `knowledge/patterns/*.md` | Copy or move; add private fields to frontmatter if the private copy is richer. Filename in memory is often `topic.md` (evergreen) — same as upstream docs. |
-| A **public** decision you also want in the org record | `knowledge/decisions/YYYY-MM-DD-topic.md` | Use the frontmatter Egregore expects (see `the-mapper-s-ego/DEVELOPMENT.md` memory section). |
-| `knowledge/` (findings, if you add them here) | `knowledge/findings/YYYY-MM-DD-topic.md` | |
-| `guides/*` and long writeups | `artifacts/YYYY-MM-DD-github-title.md` *or* `knowledge/patterns/*` for evergreen how-tos | Pick **one** home to avoid unbounded duplicates; link the other in frontmatter. |
-| `projects/README.md` or `projects/*.md` | `projects/*.md` | Same name family as DEVELOPMENT.md. |
-| `people/personas/*/` (public dossiers) | **`people/{github}.md` is canonical for Egregore** | Pull *facts* and short bullets into the profile file; keep long public narrative in the open KB only, or add a one-line link in `people/{github}.md` to a published URL if you mirror the open KB. Do **not** add `personas/` under `memory/` — not part of the mandated tree. |
-| Public personas without a GitHub handle | `people/choose-a-slug.md` | Egregore local mode uses filenames under `people/`; match your team’s existing convention. |
-| Infrastructure blurbs (non-secret) | `infrastructure/` — e.g. `services.yml` if you adopt that | Never push secrets; open KB should already be redacted. |
-| N/A from open KB (usually) | `handoffs/`, `wraps/`, `quests/`, `meetings/`, `research/` | **Session- and run-generated**; these stay Egregore-first. You can **quote** a handoff in the open KB, but the system of record is still `the-mapper-s-ego-memory/`. |
+| `knowledge/patterns/*.md` | `knowledge/patterns/*.md` | Copy/merge; add private frontmatter in memory if the private copy is richer. |
+| A decision you want in the org’s private record | `knowledge/decisions/YYYY-MM-DD-topic.md` | Egregore frontmatter per [DEVELOPMENT.md](https://github.com/Mapmakers-Tech-Guild/the-mapper-s-ego/blob/main/DEVELOPMENT.md). |
+| `knowledge/` (findings, if any) | `knowledge/findings/YYYY-MM-DD-topic.md` | |
+| `guides/*` and long writeups | `artifacts/YYYY-MM-DD-github-title.md` *or* `knowledge/patterns/*` | Pick one home; link the other in frontmatter. |
+| `projects/*` | `projects/*.md` | |
+| `people/personas/*/` | **`people/{github}.md` is canonical in Egregore** | Summarize into the single file; do **not** add `personas/` under `memory/`. |
+| Other persona slug | `people/choose-a-slug.md` | |
+| `infrastructure` blurbs (non-secret) | `infrastructure/` | No secrets. |
+| — | `handoffs/`, `wraps/`, `quests/`, `meetings/`, `research/` | **Egregore-native**; quote here if needed, but private record stays in `the-mapper-s-ego-memory`. |
 
-## How to “pull in” (practical)
+## How to pull in (practical)
 
-1. **Copy** the file (or a trimmed section) from **this** Mapmakers-KB clone into the matching `the-mapper-s-ego-memory\…` path.
-2. Adjust **frontmatter** to Egregore conventions for that subfolder (see `the-mapper-s-ego/DEVELOPMENT.md` — Memory section, ~“Directory Details”).
-3. If you use skills: **`/save`**, **`/add`** (for artifacts), **`/handoff`**, etc. on the Egregore side are still the app’s interface — the open KB is **not** wired in automatically; interop is **intentional copy/merge** until you add automation.
-4. **Provenance:** optional `source: Mapmakers-Knowledgebase/relative/path` in private frontmatter so you can trace back to the public copy.
+1. **Copy** from a clone of this repo into the matching `the-mapper-s-ego-memory/…` path.  
+2. **Frontmatter** per Egregore for that subfolder.  
+3. Egregore **skills** (`/save`, `/add`, etc.) are still the app’s interface; interop is **intentional** until you script it.  
+4. Optional: `source: Mapmakers-Knowledgebase/<path>` in the private file for traceability.
 
-## What *not* to do
+## What not to do
 
-- Do **not** symlink this whole repo into `memory/` (breaks the mandated tree and git boundaries).
-- Do **not** replace `people/{github}.md` with a folder per person in `memory/` unless upstream Egregore changes — use **one file** per person there.
-- Do **not** put **private** relay, HR, or session-only content in the open KB first “for interop” — flow is **redacted open → private**, not the reverse, when pulling into Egregore.
+- Do **not** symlink this repo into `memory/`.  
+- Do **not** replace `people/{github}.md` with a folder per person in `memory/`.  
+- Do **not** use the shared repo as a staging ground for private relay/HR first — when copying **into** Egregore, flow is **shared (already ok for guild) → private**, with redaction as needed.
 
 ## Related
 
-- [EGREGORE-VS-OPEN-KB.md](./EGREGORE-VS-OPEN-KB.md) — roles of each store.  
-- Egregore memory spec: [the-mapper-s-ego/DEVELOPMENT.md (Memory / Directory Details)](https://github.com/Mapmakers-Tech-Guild/the-mapper-s-ego/blob/main/DEVELOPMENT.md) in the Egregore app repo.  
+- [EGREGORE-VS-SHARED-KB.md](./EGREGORE-VS-SHARED-KB.md)  
+- Redirect stub: [EGREGORE-VS-OPEN-KB.md](./EGREGORE-VS-OPEN-KB.md) (old name)

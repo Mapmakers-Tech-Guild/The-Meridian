@@ -3,7 +3,8 @@ title: ""
 author: handle
 date: YYYY-MM-DD
 type: pattern
-visibility: public
+audience: shared
+status: draft
 ---
 
 # Title

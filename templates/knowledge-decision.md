@@ -2,13 +2,14 @@
 Date: YYYY-MM-DD
 Author: handle
 Category: decision
-Status: public-record
+Status: shared-record
+audience: shared
 ---
 
 # Title
 
-*Only for decisions you intentionally publish. Most org decisions stay in the Egregore memory repo.*
+*For decisions duplicated in this **shared** repo. Canonical private record may live only in Egregore memory.*
 
 ## Summary
 
-## Rationale (public)
+## Rationale (redact as needed for any export to a **publication** or **vault-snippets** repo; see [PUBLICATION-AND-RELEASE.md](../PUBLICATION-AND-RELEASE.md).)

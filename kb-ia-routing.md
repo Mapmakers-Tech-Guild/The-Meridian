@@ -1,22 +1,23 @@
-# Where knowledge lives (personal, Egregore, Mapmakers KB, company)
+# Where knowledge lives (membranes, no path names)
+
+> **This doc intentionally avoids** fixed folder paths on anyone’s machine or drive letter.
 
 ## Membranes
 
-| Membrane | Where | What goes here | What does *not* go here |
-| --- | --- | --- | --- |
-| **Personal (private tree)** | Your private OneDrive / laptop paths (e.g. cross-context relay, zettel staging, `inbox`/`outbox`) | PII, pre-canonical notes, machine setup | This public KB; company policy as sole copy |
-| **Egregore memory** (private) | `the-mapper-s-ego-memory` — [see differentiation](EGREGORE-VS-OPEN-KB.md) | **Private shared mind** for the org: handoffs, skills, `people/{github}.md`, team operational memory. | Public docs you want on the open internet |
-| **This repo (Mapmakers open KB)** | **Only** [this repository](https://github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase) and your local clone (e.g. `Mapmakers-Knowledgebase` on OneDrive) | Curated **open** knowledge: patterns, guides, redacted personas, project blurbs. | Egregore session state; private handoffs |
-| **Company / work** | e.g. `03-Ops\knowledgebase\` on work OneDrive (if applicable) | Onboarding, SOPs, tenant stack | Your personal relay; Egregore private mind |
+| Membrane | Role | What goes there |
+| --- | --- | --- |
+| **Personal / private** | Your own vault, relay, staging, inbox/outbox. | PII, machine setup, pre-canonical notes. |
+| **Egregore `memory` (private)** | [EGREGORE-VS-SHARED-KB.md](./EGREGORE-VS-SHARED-KB.md) | Session-native ops: handoffs, `people/{github}.md`, as mandated by the app. |
+| **This shared KB** | Durable, guild-wide markdown in the Mapmakers-Knowledgebase repo. | Cross-session patterns, shared personas, project context; still **redact** if publishing outward. |
+| **Publications / vault snippets (separate repo)** | [PUBLICATION-AND-RELEASE.md](./PUBLICATION-AND-RELEASE.md) | Chosen export bundles; wikilinks and cross-project refs get **closure** or **redaction**. |
+| **Company (e.g. work tenant)** | SOP, HR, tenant policy — if you use a company KB. | Not a substitute for personal or Egregore. |
 
-**Design intent:** *location* is often the isolation mechanism on Windows + OneDrive; this **Mapmakers KB** is a **separate** git repo from Egregore memory so public content never has to sit in the private `memory/` repo.
+**Design:** separate git repos and `audience` / `status` in frontmatter keep boundaries clear; *location* on disk is not the documentation contract.
 
-**Personal relay / cross-context** (if you use it): it lives in **your** private tree — it is not part of this Mapmakers repo. Use whatever `ENTER_HERE` that tree documents; do not expect it next to this folder on disk.
+## Guild / firefly
 
-## Guild bot vs “firefly” (open KB)
+*Firefly* = context you attach (persona + shared patterns) for a guild-oriented agent, separate from the private Egregore log.
 
-- **Firefly** = context packet (persona + relevant patterns) for a *public* or *guild-facing* agent — not the private Egregore session log.
+## Shared ↔ Egregore
 
-## This KB ↔ Egregore
-
-- [EGREGORE-INTEROP.md](./EGREGORE-INTEROP.md) — copy **from here** into private `memory/` using **only** Egregore-mandated paths.
+[EGREGORE-INTEROP.md](./EGREGORE-INTEROP.md)
