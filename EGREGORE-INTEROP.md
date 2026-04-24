@@ -2,10 +2,10 @@
 
 **Direction:** You can **pull** anything from this **open** `knowledgebase/` into the **private** Egregore memory repository (`the-mapper-s-ego-memory`, symlinked as `memory/` in `the-mapper-s-ego`). The **only** rule: the destination must stay the **standard Egregore `memory/` layout** — do not invent new top-level folders in the memory repo; use the table below.
 
-**Workspace paths (local):**
+**Paths (on a machine with both checkouts):**
 
-- Open KB: `knowledgebase\` (this folder)  
-- Egregore memory: `the-mapper-s-ego-memory\` (clone of `egregore.json` → `memory_repo`)
+- **This open KB (only canonical location):** e.g. `C:\Users\IOX20\OneDrive\Mapmakers-Knowledgebase` — same as this git repo, or a clone of [Mapmakers-Knowledgebase](https://github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase) anywhere you like.
+- **Egregore memory (private):** e.g. `the-mapper-s-ego-memory\` (repo named in `egregore.json` → `memory_repo`, symlinked as `the-mapper-s-ego\memory\`).
 
 ## Path map (source → destination)
 
@@ -23,18 +23,18 @@
 
 ## How to “pull in” (practical)
 
-1. **Copy** the file (or a trimmed section) from `knowledgebase\…` into the matching `the-mapper-s-ego-memory\…` path.
+1. **Copy** the file (or a trimmed section) from **this** Mapmakers-KB clone into the matching `the-mapper-s-ego-memory\…` path.
 2. Adjust **frontmatter** to Egregore conventions for that subfolder (see `the-mapper-s-ego/DEVELOPMENT.md` — Memory section, ~“Directory Details”).
 3. If you use skills: **`/save`**, **`/add`** (for artifacts), **`/handoff`**, etc. on the Egregore side are still the app’s interface — the open KB is **not** wired in automatically; interop is **intentional copy/merge** until you add automation.
-4. **Provenance:** optional `source: knowledgebase/relative/path` in private frontmatter so you can trace back to the public copy.
+4. **Provenance:** optional `source: Mapmakers-Knowledgebase/relative/path` in private frontmatter so you can trace back to the public copy.
 
 ## What *not* to do
 
-- Do **not** symlink the whole `knowledgebase/` into `memory/` (breaks the mandated tree and git boundaries).
+- Do **not** symlink this whole repo into `memory/` (breaks the mandated tree and git boundaries).
 - Do **not** replace `people/{github}.md` with a folder per person in `memory/` unless upstream Egregore changes — use **one file** per person there.
 - Do **not** put **private** relay, HR, or session-only content in the open KB first “for interop” — flow is **redacted open → private**, not the reverse, when pulling into Egregore.
 
 ## Related
 
 - [EGREGORE-VS-OPEN-KB.md](./EGREGORE-VS-OPEN-KB.md) — roles of each store.  
-- Egregore memory spec: [../the-mapper-s-ego/DEVELOPMENT.md](../the-mapper-s-ego/DEVELOPMENT.md) (search for “Directory Details” in the Memory section).  
+- Egregore memory spec: [the-mapper-s-ego/DEVELOPMENT.md (Memory / Directory Details)](https://github.com/Mapmakers-Tech-Guild/the-mapper-s-ego/blob/main/DEVELOPMENT.md) in the Egregore app repo.  

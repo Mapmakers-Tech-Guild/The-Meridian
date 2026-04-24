@@ -1,12 +1,12 @@
 ---
 type: open-kb-draft
-source: arx-staging
+source: private-staging
 zettel_area: "0 - Housekeeping / 2 - Paths / …"
 ---
 
 # Title
 
-*From private staging: redact PII; never paste private relay or team-only handoffs here.*
+*From a private zettel / staging vault: redact PII; never paste private relay or team-only handoffs here.*
 
 ## Idea (public-safe)
 

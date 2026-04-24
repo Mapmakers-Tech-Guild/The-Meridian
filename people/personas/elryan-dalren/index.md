@@ -6,7 +6,7 @@ kind: guild-persona
 updated: 2026-04-24
 visibility: public-draft
 sources:
-  - arx Staging_Zettelkasten (summaries only, no PII)
+  - private import / transcript summaries (no PII)
 ---
 
 # Elryan Dalren
@@ -15,9 +15,9 @@ Egregore **private** profile: `the-mapper-s-ego-memory/people/Hopefully-Abysmal.
 
 ## Role (public framing)
 
-Mapmakers; GitHub **Hopefully-Abysmal** — see open KB and Mapmakers org pages for up-to-date scope.
+Mapmakers; GitHub **Hopefully-Abysmal** — see this KB and Mapmakers org pages for up-to-date scope.
 
-## Notes suitable for public context (from private staging transcripts, summarized)
+## Notes suitable for public context (from private transcript imports, summarized)
 
 - Interest in a **small, legible unit** of collaboration (e.g. structured markdown, kernel/mesh-style metaphors) so teams can interoperate without constant rebasing — *abstract framing, not a product spec*.
 - **Operability and system dynamics** as a theme in guild discussions.

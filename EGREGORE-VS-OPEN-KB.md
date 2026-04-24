@@ -1,11 +1,11 @@
 # Egregore (private) vs this knowledge base (open)
 
-| | **Egregore `memory` repo** (`the-mapper-s-ego-memory`) | **This `knowledgebase/`** (Mapmakers *open* KB) |
+| | **Egregore `memory` repo** (`the-mapper-s-ego-memory`) | **Mapmakers open KB** (this git repo) |
 | --- | --- | --- |
-| **Role** | **Private shared mind** for the Egregore stack: Claude Code sessions, `/handoff`, graph sync, team continuity, whatever the org decides stays private. | **Open knowledge** meant to be shareable, publishable, and safe for strangers or a wider community without exposing session plumbing. |
-| **Tooling** | Tied to `egregore.json` → `memory_repo`; skills write here; do not rename top-level layout lightly. | Plain markdown + your publishing flow (static site, public GitHub, docs portal). **Not** a substitute for the memory symlink. |
+| **Role** | **Private shared mind** for the Egregore stack: Claude Code sessions, `/handoff`, graph sync, team continuity, whatever the org decides stays private. | **Open knowledge** — shareable, publishable, safe to show people outside your private session. |
+| **Tooling** | Tied to `egregore.json` → `memory_repo`; skills write here; do not rename top-level layout lightly. | Plain markdown + this repo (GitHub: **Mapmakers-Knowledgebase**). **Not** a substitute for the memory symlink. |
 | **Content** | Operational memory: handoffs, private decisions, `people/{github}.md` profiles, etc., per Egregore conventions. | Curated **patterns**, **guides**, **public personas** (redacted), project pages you want the world to see. |
-| **This folder’s name** | Lives next to the app in its own git repo. | Sits in **a private work area** (and may later mirror to a **public** git repo of your choice). |
+| **Where it lives** | Its own private git repository. | **Only** the Mapmakers-Knowledgebase repo and your local clone of it. |
 
 **Rule of thumb:** if it powers **Egregore commands** or should stay **team-only**, it belongs in the memory repo. If it is **educational or community-facing** and you are happy for it to leak, it belongs here (or downstream of here).
 
