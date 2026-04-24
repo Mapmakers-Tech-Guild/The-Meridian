@@ -1,5 +1,7 @@
 # Mapmakers — open knowledge base
 
+**This clone:** push to Git from **this** folder. A working copy of the same tree also lives at `C:\Users\IOX20\OneDrive\a private work area\knowledgebase` in the Foundation workspace. If you edit in both places, re-copy or merge so they match.
+
 **This folder is the open, publishable knowledge base** — *not* the Egregore private memory. Read **[EGREGORE-VS-OPEN-KB.md](./EGREGORE-VS-OPEN-KB.md)** first if you use Claude Code + `the-mapper-s-ego` so you do not conflate the two.
 
 ## Start here
