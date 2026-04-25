@@ -424,7 +424,7 @@ function buildTopologyJson(layout, builtAt) {
 const SITE_BASE = (process.env.SITE_BASE || "/The-Meridian/").replace(/\/?$/, "/");
 
 function siteHref(name) {
-  if (!name) return "./";
+  if (!name) return "../";
   return join(SITE_BASE, name)
     .split(sep)
     .join("/");
