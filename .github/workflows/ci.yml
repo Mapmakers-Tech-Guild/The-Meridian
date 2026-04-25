@@ -21,6 +21,16 @@ jobs:
 
       - run: npm ci
 
+      - name: Restore link-check cache
+        uses: actions/cache@v4
+        with:
+          path: .link-check-cache.json
+          # Exact hit when no .md files changed → 0 files re-checked (instant).
+          # Prefix hit when some files changed → old cache restored, checker only
+          # re-parses dirty files. Cache saved with new key after a clean run.
+          key: link-check-${{ hashFiles('**/*.md') }}
+          restore-keys: link-check-
+
       - name: Check internal links
         run: npm run check:links
 
