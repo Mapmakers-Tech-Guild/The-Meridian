@@ -5,15 +5,19 @@ description: A shared map — a knowledge garden at the edge of a knowledge fore
 
 # Welcome, mapmaker
 
-**The Meridian** is the Mapmakers [shared knowledge base](ONBOARDING): numbered areas, membranes, and paths between ideas. The edges-only map on the intro is **rebuilt on every deploy** from this repo — the same files Quartz publishes.
+**The Meridian** is the Mapmakers guild's shared knowledge garden: seven numbered territories, navigable by search, backlinks, and the edges map on the intro screen.
 
-**Start here**
+## Find your footing
 
-- [[ONBOARDING]] — small first steps, membranes, your first PR  
-- [NAV (table of contents)](0%20-%20Housekeeping/NAV.md) — how the tree is organized  
-- [Contributing](CONTRIBUTING.md) — how we work together  
-- [License (AFPP)](LICENSE.md) — The ARX Foundation Public Pact  
+- [[ONBOARDING]] — how the site works, how to contribute, and the legal bits
+- [NAV](0%20-%20Housekeeping/NAV.md) — the full table of contents
+- [Contributing](CONTRIBUTING.md) — practical guide for opening a PR
+- [License (AFPP)](LICENSE.md) — the ARX Foundation Public Pact
 
-**Contact** — [themeridian@hopefullyabysmal.com](mailto:themeridian@hopefullyabysmal.com) (put “Meridian” in the subject).
+## Orient yourself
 
-The built-in [graph view](https://quartz.jzhao.xyz/features/graph-view) in the shell on the right is the *note* graph; the **meridian** animation reflects the *vault topology* and cross-links. Replay the edge animation anytime from the footer **Map topology** link.
+The **intro animation** you just saw traces the vault topology — every edge rebuilt on each deploy from the same files Quartz publishes. Replay it anytime via the **Map topology** link in the footer.
+
+The **graph view** in the right sidebar is the local note graph for whatever page you're reading. The **explorer** in the left sidebar lets you browse the full tree.
+
+**Questions or access?** [themeridian@hopefullyabysmal.com](mailto:themeridian@hopefullyabysmal.com) — put "Meridian" in the subject.
