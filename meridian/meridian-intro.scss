@@ -109,12 +109,18 @@ body.meridian-reveal #quartz-body {
 }
 
 /* ── Hint / caption ── */
+@keyframes meridianHintPulse {
+  0%, 100% { opacity: 0.55; }
+  50%       { opacity: 1; }
+}
+
 .meridian-intro__hint {
   margin: 0.8rem 0 0 0;
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   color: color-mix(in srgb, var(--gray) 65%, transparent);
   text-transform: uppercase;
+  animation: meridianHintPulse 2.4s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -124,5 +130,8 @@ body.meridian-reveal #quartz-body {
   }
   .meridian-intro {
     transition: none;
+  }
+  .meridian-intro__hint {
+    animation: none;
   }
 }

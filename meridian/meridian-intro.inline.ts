@@ -1,7 +1,6 @@
 import { getFullSlug } from "../quartz/util/path"
 
 const SEEN = "meridianIntroSeen"
-const DURATION = 2400
 
 function initMeridian() {
   const el = document.getElementById("meridian-intro")
@@ -11,24 +10,26 @@ function initMeridian() {
     document.body.classList.add("meridian-reveal")
     return
   }
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    finish()
-    return
-  }
   if (sessionStorage.getItem(SEEN)) {
     finish()
     return
   }
   if (el.dataset.meridianLoading === "1") return
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    el.addEventListener("click", finish, { once: true })
+    return
+  }
+
   const topologyUrl = (el as HTMLElement).dataset.topology
   if (!topologyUrl) {
-    finish()
+    el.addEventListener("click", finish, { once: true })
     return
   }
   ;(el as HTMLElement).dataset.meridianLoading = "1"
   const stage = document.getElementById("meridian-intro-stage")
   if (!stage) {
-    finish()
+    el.addEventListener("click", finish, { once: true })
     return
   }
   void fetch(new URL(topologyUrl, window.location.href).toString(), { cache: "no-store" })
@@ -68,18 +69,14 @@ function initMeridian() {
         svg.appendChild(line)
       }
       stage.appendChild(svg)
-      const t = window.setTimeout(finish, DURATION)
-      const onClick = () => {
-        window.clearTimeout(t)
-        finish()
-      }
-      el.addEventListener("click", onClick, { once: true })
+      el.addEventListener("click", finish, { once: true })
       window.addCleanup?.(() => {
-        window.clearTimeout(t)
-        el.removeEventListener("click", onClick)
+        el.removeEventListener("click", finish)
       })
     })
-    .catch(() => finish())
+    .catch(() => {
+      el.addEventListener("click", finish, { once: true })
+    })
     .finally(() => {
       ;(el as HTMLElement).dataset.meridianLoading = "0"
     })
