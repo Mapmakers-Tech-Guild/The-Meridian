@@ -27,12 +27,14 @@ cpSync(src, dest, { recursive: true, force: true });
 
 // Important: avoid copying any existing symlinked cache dir from node_modules.
 // The CLI expects to write into repo-local `quartz/.quartz-cache`.
+// Use lstatSync (not existsSync) — existsSync follows symlinks and returns false
+// for circular/dangling symlinks, causing mkdirSync to throw ELOOP.
 const cacheDir = join(dest, ".quartz-cache");
-if (existsSync(cacheDir)) {
+let cacheSt = null;
+try { cacheSt = lstatSync(cacheDir); } catch { /* path does not exist */ }
+if (cacheSt !== null) {
   try {
-    const st = lstatSync(cacheDir);
-    if (st.isSymbolicLink()) rmSync(cacheDir, { recursive: true, force: true });
-    else if (!st.isDirectory()) rmSync(cacheDir, { force: true });
+    if (cacheSt.isSymbolicLink() || !cacheSt.isDirectory()) rmSync(cacheDir, { recursive: true, force: true });
   } catch {
     rmSync(cacheDir, { recursive: true, force: true });
   }
