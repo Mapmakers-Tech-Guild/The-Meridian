@@ -1,0 +1,17 @@
+# Jekyll config (GitHub Pages fallback)
+#
+# This repo deploys Pages via GitHub Actions (`.github/workflows/pages.yml`).
+# If Pages is accidentally set to "Deploy from a branch", GitHub will run Jekyll
+# against the repo root. Exclude working areas / templates so the default theme
+# doesn't try to render placeholder frontmatter like `date: YYYY-MM-DD`.
+
+exclude:
+  - node_modules
+  - scripts
+  - assets
+  - LEGAL
+  - docs
+  - package.json
+  - package-lock.json
+  - kb-graph.html
+  - "0 - Housekeeping/Templates"
