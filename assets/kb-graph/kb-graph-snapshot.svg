@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="428" height="401" viewBox="0 0 428.22514115889123 400.77929040159165">
-<rect width="100%" height="100%" fill="#0b0d12"/><line x1="212.839986743399" y1="200.62576129634684" x2="124.29832873152232" y2="278.74331952514973" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="319.66260088651376" y2="173.07972087934726" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="299.4027798328766" y2="286.6936528981067" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="103.15545880482436" y2="157.18097865274765" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="309.8063788050627" y2="97.72216056095363" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="214.60358653983806" y2="330.77929040159165" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="151.2236915609996" y2="83.40978756612978" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="358.22514115889123" y2="238.56954451127507" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="70" y2="225.56749451250758" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="212.839986743399" y1="200.62576129634684" x2="231.45221477365754" y2="70" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="124.29832873152232" y1="278.74331952514973" x2="103.15545880482436" y2="157.18097865274765" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="299.4027798328766" y1="286.6936528981067" x2="319.66260088651376" y2="173.07972087934726" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<circle cx="212.839986743399" cy="200.62576129634684" r="12" fill="#4f6fff"/>
-<text x="212.839986743399" y="222.62576129634684" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">0 · Housekeeping</text>
-<circle cx="124.29832873152232" cy="278.74331952514973" r="9" fill="#3dd6c3"/>
-<text x="124.29832873152232" y="300.74331952514973" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">1 · People</text>
-<circle cx="319.66260088651376" cy="173.07972087934726" r="9" fill="#3dd6c3"/>
-<text x="319.66260088651376" y="195.07972087934726" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">2 · Projects</text>
-<circle cx="299.4027798328766" cy="286.6936528981067" r="9" fill="#3dd6c3"/>
-<text x="299.4027798328766" y="308.6936528981067" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">3 · Knowledge</text>
-<circle cx="103.15545880482436" cy="157.18097865274765" r="9" fill="#3dd6c3"/>
-<text x="103.15545880482436" y="179.18097865274765" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">4 · Guild</text>
-<circle cx="309.8063788050627" cy="97.72216056095363" r="9" fill="#3dd6c3"/>
-<text x="309.8063788050627" y="119.72216056095363" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">5 · Operations</text>
-<circle cx="214.60358653983806" cy="330.77929040159165" r="9" fill="#3dd6c3"/>
-<text x="214.60358653983806" y="352.77929040159165" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">6 · Archive</text>
-<circle cx="151.2236915609996" cy="83.40978756612978" r="9" fill="#e8a36c"/>
-<text x="151.2236915609996" y="105.40978756612978" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Egregore</text>
-<circle cx="358.22514115889123" cy="238.56954451127507" r="9" fill="#e8a36c"/>
-<text x="358.22514115889123" y="260.56954451127507" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Work context</text>
-<circle cx="70" cy="225.56749451250758" r="9" fill="#e8a36c"/>
-<text x="70" y="247.56749451250758" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Publication</text>
-<circle cx="231.45221477365754" cy="70" r="9" fill="#e8a36c"/>
-<text x="231.45221477365754" y="92" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Membranes</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="389" height="407" viewBox="0 0 389.4851468452472 407.431944874054">
+<rect width="100%" height="100%" fill="#0b0d12"/><line x1="202.68835756230544" y1="197.7118434891018" x2="319.4851468452472" y2="237.53291099417825" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="271.4861777735349" y2="337.431944874054" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="162.24460058544565" y2="330.64090044209274" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="220.1374015060519" y2="281.4024642203267" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="89.40421026129842" y2="263.3975270488578" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="70" y2="186.61063162664277" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="96.77704562722597" y2="113.50149529746245" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="164.683168232307" y2="70.523991769547" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="242.18122581211819" y2="70" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="202.68835756230544" y1="197.7118434891018" x2="313.88692308503306" y2="129.50410223340174" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="319.4851468452472" y1="237.53291099417825" x2="220.1374015060519" y2="281.4024642203267" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<line x1="162.24460058544565" y1="330.64090044209274" x2="271.4861777735349" y2="337.431944874054" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
+<circle cx="202.68835756230544" cy="197.7118434891018" r="12" fill="#4f6fff"/>
+<text x="202.68835756230544" y="219.7118434891018" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">0 · Housekeeping</text>
+<circle cx="319.4851468452472" cy="237.53291099417825" r="9" fill="#3dd6c3"/>
+<text x="319.4851468452472" y="259.5329109941782" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">1 · People</text>
+<circle cx="271.4861777735349" cy="337.431944874054" r="9" fill="#3dd6c3"/>
+<text x="271.4861777735349" y="359.431944874054" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">2 · Projects</text>
+<circle cx="162.24460058544565" cy="330.64090044209274" r="9" fill="#3dd6c3"/>
+<text x="162.24460058544565" y="352.64090044209274" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">3 · Knowledge</text>
+<circle cx="220.1374015060519" cy="281.4024642203267" r="9" fill="#3dd6c3"/>
+<text x="220.1374015060519" y="303.4024642203267" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">4 · Guild</text>
+<circle cx="89.40421026129842" cy="263.3975270488578" r="9" fill="#3dd6c3"/>
+<text x="89.40421026129842" y="285.3975270488578" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">5 · Operations</text>
+<circle cx="70" cy="186.61063162664277" r="9" fill="#3dd6c3"/>
+<text x="70" y="208.61063162664277" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">6 · Archive</text>
+<circle cx="96.77704562722597" cy="113.50149529746245" r="9" fill="#e8a36c"/>
+<text x="96.77704562722597" y="135.50149529746244" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Egregore</text>
+<circle cx="164.683168232307" cy="70.523991769547" r="9" fill="#e8a36c"/>
+<text x="164.683168232307" y="92.523991769547" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Work context</text>
+<circle cx="242.18122581211819" cy="70" r="9" fill="#e8a36c"/>
+<text x="242.18122581211819" y="92" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Publication</text>
+<circle cx="313.88692308503306" cy="129.50410223340174" r="9" fill="#e8a36c"/>
+<text x="313.88692308503306" y="151.50410223340174" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Membranes</text>
 </svg>

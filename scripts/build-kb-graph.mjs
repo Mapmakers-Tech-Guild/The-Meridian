@@ -91,8 +91,16 @@ function runLayout() {
     (l) => nodes.some((n) => n.id === l.source) && nodes.some((n) => n.id === l.target)
   );
 
+  // Deterministic seed layout (d3 default random x/y can differ per OS/Node)
+  nodes.forEach((d, i) => {
+    const a = (2 * Math.PI * i) / nodes.length;
+    d.x = 140 * Math.cos(a);
+    d.y = 140 * Math.sin(a);
+  });
+
   const sim = d3
     .forceSimulation(nodes)
+    .alpha(0.9)
     .force("link", d3.forceLink(links).id((d) => d.id).distance(90).strength(0.55))
     .force("charge", d3.forceManyBody().strength(-480))
     .force("center", d3.forceCenter(0, 0))
