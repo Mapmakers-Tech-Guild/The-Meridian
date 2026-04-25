@@ -6,7 +6,7 @@ import script from "./meridian-intro.inline"
 
 export default (() => {
   const MeridianIntro: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
-    const rel = pathToRoot(fileData.slug!) + "meridian-assets/meridian-topology.json"
+    const rel = pathToRoot(fileData.slug!) + "/meridian-assets/meridian-topology.json"
     return (
       <div id="meridian-intro" class="meridian-intro" data-topology={rel} aria-label="The Meridian — vault map">
         <div class="meridian-intro__hatch" />
