@@ -1,8 +1,7 @@
-# Publish interactive kb-graph to GitHub Pages (full URL; README cannot iframe).
-# Prereq: private repos need Pro/Team/Enterprise — Free only gets Pages for public repos
-#   (https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#who-can-use-this-feature).
-# Otherwise deploy-pages returns 404. If this repo stays private on Free, disable this workflow or host _site elsewhere.
-# One-time: Settings → Pages → Source: GitHub Actions.
+# Publish interactive kb-graph to GitHub Pages (README on github.com cannot embed iframes).
+# Public repo + Free: supported. One-time: Settings → Pages → Build: GitHub Actions
+#   (https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
+# Private on Free: Pages unavailable — use a public repo or Pro/Team, or host _site elsewhere.
 name: Deploy Pages (interactive map)
 
 on:
@@ -40,6 +39,7 @@ jobs:
           mkdir -p _site
           cp assets/kb-graph/kb-graph-animated.html _site/index.html
           cp assets/kb-graph/kb-graph-snapshot.svg _site/snapshot.svg
+          : > _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
