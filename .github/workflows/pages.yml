@@ -1,0 +1,52 @@
+# Publish interactive kb-graph to GitHub Pages (full URL; README cannot iframe).
+# Repo → Settings → Pages → Build: GitHub Actions (one-time).
+name: Deploy Pages (interactive map)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Build map
+        run: npm run build:graph
+        env:
+          CHRONO: git
+      - name: Assemble static site
+        run: |
+          mkdir -p _site
+          cp assets/kb-graph/kb-graph-animated.html _site/index.html
+          cp assets/kb-graph/kb-graph-snapshot.svg _site/snapshot.svg
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

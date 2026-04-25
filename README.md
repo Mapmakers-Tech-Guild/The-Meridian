@@ -22,7 +22,11 @@ Each push to **`main`** runs [`kb-graph.yml`](.github/workflows/kb-graph.yml): *
   <img src="assets/kb-graph/kb-graph-snapshot.svg" width="520" alt="Stylized force-directed map of Mapmakers areas 0 through 6 and Housekeeping satellites" />
 </p>
 
-**Animated** (chronological reveal): clone the repo and open [`assets/kb-graph/kb-graph-animated.html`](assets/kb-graph/kb-graph-animated.html) in a browser (GitHub’s file view won’t execute the animation — it’s a local/preview page). Build metadata: [`assets/kb-graph/kb-graph.json`](assets/kb-graph/kb-graph.json).
+**Animated (chronological reveal)**  
+GitHub **does not allow `<iframe>` in READMEs** (sanitized HTML — no embedded live apps). For real interactivity, use a **hosted** page:
+
+- **Live site (GitHub Pages):** [mapmakers-tech-guild.github.io/Mapmakers-Knowledgebase](https://mapmakers-tech-guild.github.io/Mapmakers-Knowledgebase/) — built by [`pages.yml`](.github/workflows/pages.yml) on each push to `main`. *One-time setup:* [enable Pages with GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow) in this repo’s **Settings → Pages**.  
+- **From a clone:** open [`assets/kb-graph/kb-graph-animated.html`](assets/kb-graph/kb-graph-animated.html) locally. Build metadata: [`assets/kb-graph/kb-graph.json`](assets/kb-graph/kb-graph.json).
 
 **Hack locally:** `npm ci` then set `CHRONO=git` and run `npm run build:graph` (e.g. bash: `CHRONO=git npm run build:graph` · PowerShell: `$env:CHRONO='git'; npm run build:graph`). Source: [`scripts/build-kb-graph.mjs`](scripts/build-kb-graph.mjs). Optional [**vis-network** playground](kb-graph.html) at repo root for draggable tuning.
 
