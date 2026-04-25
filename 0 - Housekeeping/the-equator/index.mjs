@@ -23,7 +23,7 @@ import { collectUrlsFromMessage, writeLinkNote, writeAuditNote, kbPaths } from "
 
 const TOKEN = process.env.DISCORD_TOKEN
 const GUILD_ID = process.env.DISCORD_GUILD_ID
-const KB_ROOT = resolve(process.env.KB_PATH ?? "../")
+const KB_ROOT = resolve(process.env.KB_PATH ?? "../../")
 const IGNORE_IDS = new Set((process.env.IGNORE_CHANNEL_IDS ?? "").split(",").filter(Boolean))
 const EXPORT_ON_START = process.env.EXPORT_ON_START === "true"
 

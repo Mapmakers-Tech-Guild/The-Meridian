@@ -95,7 +95,7 @@ async function fetchAuditLog(token, guildId) {
 export async function runExport({
   token = process.env.DISCORD_TOKEN,
   guildId = process.env.DISCORD_GUILD_ID,
-  kbRoot = resolve(process.env.KB_PATH ?? "../"),
+  kbRoot = resolve(process.env.KB_PATH ?? "../../"),
   dryRun = false,
   overwrite = false,
   linksOnly = false,
