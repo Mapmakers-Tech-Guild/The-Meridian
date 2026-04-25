@@ -13,6 +13,6 @@
 
 - **Egregore → here:** Summarize or copy a **non-sensitive** slice from private memory.  
 - **Here → Egregore:** [INTEROP.md](./INTEROP.md) — only mandated `memory/` paths.  
-- **Here → publication:** [../Publication/PUBLICATION-AND-RELEASE.md](../Publication/PUBLICATION-AND-RELEASE.md) — frontmatter, bundles, link rules.
+- **Here → publication:** [../Publication/PUBLICATION-AND-RELEASE.md](../Publication/PUBLICATION-AND-RELEASE.md) — bundles, **link closure**, and **redaction** when shipped notes still reference unpublished or other-store material ([§1](../Publication/PUBLICATION-AND-RELEASE.md#1-link-closure-and-redaction)).
 
 [← Egregore index](./README.md) · [Housekeeping root](../README.md) · [NAV](../NAV.md)

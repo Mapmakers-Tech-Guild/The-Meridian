@@ -31,6 +31,6 @@ A **publications** export is separate — see [../Publication/PUBLICATION-AND-RE
 
 - Do **not** symlink this whole repo into `memory/`.  
 - Do **not** use `personas/` folders in `memory/`.  
-- **Shared → Egregore:** keep content appropriate for `memory/` when you copy; trim what should stay private.
+- **Shared → Egregore:** keep content appropriate for `memory/` when you copy; **redact** or trim private detail and **off-bundle** link targets the same way you would on a publish pass ([Publication doc](../Publication/PUBLICATION-AND-RELEASE.md#1-link-closure-and-redaction)).
 
 [← Egregore index](./README.md) · [VS-SHARED-KB](./VS-SHARED-KB.md) · [Redirect](./VS-OPEN-REDIRECT.md)

@@ -1,6 +1,6 @@
 # 2 — Projects
 
-Project blurbs, **links**, and **shared** context the guild can rely on. For **export** to other repos, see [0 - Housekeeping / Publication / PUBLICATION-AND-RELEASE.md](../0%20-%20Housekeeping/Publication/PUBLICATION-AND-RELEASE.md) (link closure in the bundle).
+Project blurbs, **links**, and **shared** context the guild can rely on. For **export** to other repos, see [0 - Housekeeping / Publication / PUBLICATION-AND-RELEASE.md](../0%20-%20Housekeeping/Publication/PUBLICATION-AND-RELEASE.md) (link closure + **redaction** of links to notes not in the published set).
 
 | Project | Doc |
 | --- | --- |
