@@ -20,7 +20,6 @@ const config: QuartzConfig = {
       ".github",
       "package.json",
       "package-lock.json",
-      "README.md",
       "assets",
       "globals.d.ts",
       "tsconfig.json",

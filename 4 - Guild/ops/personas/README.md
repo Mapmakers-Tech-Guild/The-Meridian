@@ -1,6 +1,6 @@
 # Guild ops — personas (for **agents**)
 
-This folder is **not** the human roster. That is **[1 - People/](../../1%20-%20People/)**.
+This folder is **not** the human roster. That is **[1 - People/](../../../1%20-%20People/)**.
 
 Here: **short packs** for guild **automations, bots, and toolchains** that need a stable, **redacted** (no PII) view of a person. Keep them boring and fact-checked.
 

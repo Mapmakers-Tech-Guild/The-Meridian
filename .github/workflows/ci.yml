@@ -21,6 +21,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Check internal links
+        run: npm run check:links
+
       - name: Build site
         run: npm run build:site
         env:
