@@ -59,15 +59,15 @@ Keep the map animation as a *brand intro*:
 
 That approach keeps the vibe but avoids the “this page is a graph demo” problem.
 
-## How to replicate what I did here (graph intro)
+## How this repo deploys now (Quartz + meridian map)
 
-In this repo, the intro page comes from:
-
-- `scripts/build-kb-graph.mjs` → generates `assets/kb-graph/kb-graph-animated.html`
-- `.github/workflows/pages.yml` → publishes that file as `_site/index.html`
+- **Vault site (Quartz):** `npm run build:site` runs the graph builder, then `npx quartz build -d . -o public`, then copies map assets into `public/meridian-assets/`.
+- **GitHub Actions:** `.github/workflows/pages.yml` runs `build:site` and publishes the **`public/`** folder (not a hand-rolled `_site` from the graph HTML alone).
+- **Intro animation:** The index page uses a `MeridianIntro` component that fetches `meridian-assets/meridian-topology.json` (same graph as `build:graph`, edges-only). The graph is **discovered from the repo** (area folders + housekeeping satellites + markdown cross-links).
+- **Cache link (monorepo):** `scripts/ensure-quartz-cache-link.mjs` links the CLI’s expected cache path under `node_modules/@jackyzha0/quartz` to `./quartz/.quartz-cache` so `npx quartz build` works from this mixed layout.
 
 To do the same in ARX KB:
 
 - port `scripts/build-kb-graph.mjs` (or adapt it to ARX topology)
-- add a `pages.yml` that copies the generated HTML to `_site/index.html`
+- add a `pages.yml` that runs `npm run build:site` (or your equivalent) and uploads `public/`
 

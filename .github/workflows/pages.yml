@@ -27,22 +27,19 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - run: npm ci
-      - name: Build map
-        run: npm run build:graph
+      - name: Build Quartz site + meridian map
+        run: npm run build:site
         env:
           CHRONO: git
-      - name: Assemble static site
-        run: |
-          mkdir -p _site
-          cp assets/kb-graph/kb-graph-animated.html _site/index.html
-          cp assets/kb-graph/kb-graph-snapshot.svg _site/snapshot.svg
-          : > _site/.nojekyll
+          SITE_BASE: /The-Meridian/
+      - name: Jekyll nudge
+        run: : > public/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: public
 
   deploy:
     needs: build

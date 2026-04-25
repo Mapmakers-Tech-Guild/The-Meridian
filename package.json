@@ -1,10 +1,17 @@
 {
   "name": "mapmakers-kb-tooling",
+  "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
-    "build:graph": "node scripts/build-kb-graph.mjs"
+    "postinstall": "node scripts/vend-quartz.mjs && node scripts/ensure-quartz-cache-link.mjs",
+    "build:graph": "node scripts/build-kb-graph.mjs",
+    "build:site": "node scripts/vend-quartz.mjs && node scripts/ensure-quartz-cache-link.mjs && npm run build:graph && npx quartz build -d . -o public && node scripts/collect-meridian-assets.mjs"
   },
   "devDependencies": {
+    "@jackyzha0/quartz": "github:jackyzha0/quartz#v4",
     "d3": "^7.9.0"
   }
 }

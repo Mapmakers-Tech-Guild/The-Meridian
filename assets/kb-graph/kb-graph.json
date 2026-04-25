@@ -1,5 +1,15 @@
 {
-  "builtAt": "2026-04-25T04:25:13Z",
-  "nodeCount": 11,
-  "edgeCount": 12
+  "builtAt": "2026-04-25T04:40:35Z",
+  "nodeCount": 12,
+  "edgeCount": 31,
+  "areas": [
+    "0 - Housekeeping",
+    "1 - People",
+    "2 - Projects",
+    "3 - Knowledge",
+    "4 - Guild",
+    "5 - Operations",
+    "6 - Archive"
+  ],
+  "satellites": 5
 }

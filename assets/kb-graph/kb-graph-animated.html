@@ -3,136 +3,69 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>The Meridian</title>
+<title>The Meridian — map</title>
 <style>
   * { box-sizing: border-box; }
-  body { margin:0; background:#0b0d12; color:#c8cfdd; font-family: ui-sans-serif, system-ui, sans-serif; }
-  a { color: #8b7cff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Intro (loading) overlay */
-  .intro {
-    position: fixed; inset: 0;
-    display: grid; place-items: center;
-    background: radial-gradient(1200px 700px at 50% 40%, rgba(139,124,255,0.12), rgba(11,13,18,0.0) 60%), #0b0d12;
-    z-index: 10;
-    transition: opacity 650ms ease, visibility 650ms ease;
-  }
-  body.is-loaded .intro { opacity: 0; visibility: hidden; pointer-events: none; }
-  .introInner { width: min(820px, 92vw); padding: 20px; }
-  .introTitle { margin: 0 0 10px; font-size: 0.9rem; letter-spacing: 0.14em; font-weight: 650; color: rgba(220,230,250,0.9); }
-  .introMeta { margin: 0 0 16px; color: rgba(200, 210, 230, 0.5); font-size: 0.78rem; }
-  .stage {
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(120,150,200,.14);
-    box-shadow: 0 12px 56px rgba(0,0,0,.55);
-    background: rgba(0,0,0,0.08);
-  }
+  body { margin:0; background:#0a0c10; color:#d4ddd6; font-family: "Source Sans 3", "Spectral", ui-sans-serif, system-ui, sans-serif; }
+  a { color: #9eb8a4; text-decoration: none; }
+  a:hover { text-decoration: underline; color: #c8dbcc; }
+  @keyframes draw { from { stroke-dashoffset: 120; } to { stroke-dashoffset: 0; } }
+  .edge { stroke-dasharray: 120; stroke-dashoffset: 120; animation: draw 0.5s ease-out both; }
+  .intro { min-height: 100vh; display: grid; place-items: center; padding: 32px 16px; }
+  .inner { width: min(860px, 96vw); }
+  .topo { background-image:
+      repeating-linear-gradient(0deg, rgba(100,120,100,0.04) 0 1px, transparent 1px 22px),
+      repeating-linear-gradient(90deg, rgba(100,120,100,0.03) 0 1px, transparent 1px 32px);
+    border: 1px solid rgba(120,150,130,0.2); border-radius: 14px; padding: 18px; box-shadow: 0 16px 60px rgba(0,0,0,.4); }
+  .kicker { font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(200, 210, 200, 0.55); margin: 0 0 8px; }
+  .meta { font-size: 0.8rem; color: rgba(200, 210, 200, 0.55); margin: 0 0 12px; }
   svg { display: block; width: 100%; height: auto; }
-
-  @keyframes draw {
-    from { stroke-dashoffset: 120; }
-    to { stroke-dashoffset: 0; }
-  }
-  .edge {
-    stroke-dasharray: 120; stroke-dashoffset: 120;
-    animation: draw 0.5s ease-out both;
-  }
-
-  /* Landing */
-  main { min-height: 100vh; display: grid; place-items: center; padding: 46px 18px; }
-  .card {
-    width: min(920px, 92vw);
-    border-radius: 14px;
-    border: 1px solid rgba(120,150,200,.14);
-    background: rgba(18,22,31,0.45);
-    box-shadow: 0 18px 80px rgba(0,0,0,.55);
-    padding: 26px 22px;
-    backdrop-filter: blur(10px);
-  }
-  .hero { display: grid; gap: 14px; align-items: center; grid-template-columns: 1fr; }
-  .hero h1 { margin: 0; font-size: 1.6rem; letter-spacing: 0.03em; }
-  .sub { margin: 0; color: rgba(200, 210, 230, 0.5); line-height: 1.6; }
-  .links { margin-top: 16px; display: grid; gap: 10px; }
-  .links a {
-    display: block;
-    padding: 10px 12px;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.18);
-    border: 1px solid rgba(120,150,200,.12);
-  }
-  .links a span { color: rgba(220,230,250,0.92); font-weight: 600; }
-  .links a small { display: block; margin-top: 4px; color: rgba(200, 210, 230, 0.5); font-size: 0.82rem; }
-  .footer { margin-top: 14px; font-size: 0.78rem; color: rgba(200, 210, 230, 0.5); display:flex; gap:10px; flex-wrap: wrap; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .edge { animation: none; stroke-dashoffset: 0; }
-    .intro { transition: none; }
-  }
+  @media (prefers-reduced-motion: reduce) { .edge { animation: none; stroke-dashoffset: 0; } }
 </style>
 </head>
 <body>
-<div class="intro" id="intro">
-  <div class="introInner">
-    <p class="introTitle">THE MERIDIAN</p>
-    <p class="introMeta">Loading map · 2026-04-25T04:25:13Z · <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian">Repo</a></p>
-    <div class="stage" aria-label="The Meridian — edges-only intro">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 389.4851468452472 407.431944874054" width="389" height="407">
-        <rect width="100%" height="100%" fill="#0b0d12"/>
-        <line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="319.4851468452472" y2="237.53291099417825" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:123.39857132093447; animation-delay:0.41s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="271.4861777735349" y2="337.431944874054" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:155.7396763732286; animation-delay:0.47s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="162.24460058544565" y2="330.64090044209274" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:138.94542691580318; animation-delay:0.53s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="220.1374015060519" y2="281.4024642203267" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:85.49028677533212; animation-delay:0.59s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="89.40421026129842" y2="263.3975270488578" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:130.9500173899517; animation-delay:0.6499999999999999s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="70" y2="186.61063162664277" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:133.15193253346877; animation-delay:0.71s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="96.77704562722597" y2="113.50149529746245" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:135.3092337513107; animation-delay:0.77s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="164.683168232307" y2="70.523991769547" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:132.74465729755187; animation-delay:0.83s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="242.18122581211819" y2="70" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:133.6787253454412; animation-delay:0.89s"/><line class="edge" x1="202.68835756230544" y1="197.7118434891018" x2="313.88692308503306" y2="129.50410223340174" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:130.4508219273335; animation-delay:0.95s"/><line class="edge" x1="319.4851468452472" y1="237.53291099417825" x2="220.1374015060519" y2="281.4024642203267" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:108.60254234705313; animation-delay:0.59s"/><line class="edge" x1="162.24460058544565" y1="330.64090044209274" x2="271.4861777735349" y2="337.431944874054" stroke="rgba(139, 124, 255, 0.6)" stroke-width="1.2" style="--len:109.4524575832728; animation-delay:0.53s"/>
+<section class="intro">
+  <div class="inner">
+    <p class="kicker">The Meridian</p>
+    <p class="meta">Vault map · auto-built 2026-04-25T04:40:35Z · edges & topology match the current KB tree and links. <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian">GitHub</a> · <a href="./">Quartz home</a></p>
+    <div class="topo" aria-label="Meridian — edges-only">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.9179311412113 417.48755734880683" width="401" height="417">
+        <rect width="100%" height="100%" fill="#0a0c10"/>
+        <line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="330.9179311412113" y2="299.54607425275447" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:173.80653887820662; animation-delay:0.41s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="262.53632447908046" y2="276.997437287394" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:111.8534859883096; animation-delay:0.47s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="277.20277309066654" y2="347.48755734880683" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:180.92915786673493; animation-delay:0.53s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="208.8233805615432" y2="324.9461995722122" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:142.2117253819713; animation-delay:0.59s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="138.45080458552172" y2="300.0704504469056" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:133.3335165853722; animation-delay:0.6499999999999999s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="70" y2="225.616666287517" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:138.8101266165394; animation-delay:0.71s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:71.99664181796976; animation-delay:0.77s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="153.14240301499004" y2="127.28638266609029" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:74.07045568721871; animation-delay:0.83s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="260.7112321858159" y2="70" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:127.21541305888307; animation-delay:0.89s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:71.99817497375071; animation-delay:0.95s"/>
+<line class="edge" x1="202.07230625869676" y1="182.89480805535777" x2="316.25375603789024" y2="229.0575043851435" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:123.1600503658329; animation-delay:1.0099999999999998s"/>
+<line class="edge" x1="330.9179311412113" y1="299.54607425275447" x2="208.8233805615432" y2="324.9461995722122" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:124.70864303445566; animation-delay:0.59s"/>
+<line class="edge" x1="277.20277309066654" y1="347.48755734880683" x2="262.53632447908046" y2="276.997437287394" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:71.99973431304237; animation-delay:0.53s"/>
+<line class="edge" x1="194.15751883311026" y1="254.45508036529807" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:114.62555758129572; animation-delay:0.95s"/>
+<line class="edge" x1="153.14240301499004" y1="127.28638266609029" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:133.61930025294367; animation-delay:0.83s"/>
+<line class="edge" x1="153.14240301499004" y1="127.28638266609029" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:127.85035464923253; animation-delay:0.95s"/>
+<line class="edge" x1="260.7112321858159" y1="70" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:102.14862397487232; animation-delay:0.95s"/>
+<line class="edge" x1="316.25375603789024" y1="229.0575043851435" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:124.70977509896176; animation-delay:1.0099999999999998s"/>
+<line class="edge" x1="316.25375603789024" y1="229.0575043851435" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:71.9999999998209; animation-delay:1.0099999999999998s"/>
+<line class="edge" x1="330.9179311412113" y1="299.54607425275447" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:144.00211145827137; animation-delay:0.77s"/>
+<line class="edge" x1="262.53632447908046" y1="276.997437287394" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:106.13991173469717; animation-delay:0.95s"/>
+<line class="edge" x1="262.53632447908046" y1="276.997437287394" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:71.99874246938299; animation-delay:0.77s"/>
+<line class="edge" x1="277.20277309066654" y1="347.48755734880683" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:176.14525433363997; animation-delay:0.95s"/>
+<line class="edge" x1="277.20277309066654" y1="347.48755734880683" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:124.7058780827482; animation-delay:0.77s"/>
+<line class="edge" x1="277.20277309066654" y1="347.48755734880683" x2="316.25375603789024" y2="229.0575043851435" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:124.70227228932302; animation-delay:1.0099999999999998s"/>
+<line class="edge" x1="208.8233805615432" y1="324.9461995722122" x2="316.25375603789024" y2="229.0575043851435" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:143.9997480541806; animation-delay:1.0099999999999998s"/>
+<line class="edge" x1="208.8233805615432" y1="324.9461995722122" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:72.0005929647867; animation-delay:0.77s"/>
+<line class="edge" x1="208.8233805615432" y1="324.9461995722122" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:166.48451937426515; animation-delay:0.95s"/>
+<line class="edge" x1="208.8233805615432" y1="324.9461995722122" x2="138.45080458552172" y2="300.0704504469056" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:74.63981741702015; animation-delay:0.6499999999999999s"/>
+<line class="edge" x1="138.45080458552172" y1="300.0704504469056" x2="70" y2="225.616666287517" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:101.13791882404003; animation-delay:0.71s"/>
+<line class="edge" x1="138.45080458552172" y1="300.0704504469056" x2="316.25375603789024" y2="229.0575043851435" stroke="rgba(160, 190, 170, 0.55)" stroke-width="1.2" style="--len:191.4594684353429; animation-delay:1.0099999999999998s"/>
+
       </svg>
     </div>
-    <p class="introMeta" style="margin-top:12px">Tip: click to skip.</p>
   </div>
-</div>
-
-<main>
-  <section class="card">
-    <div class="hero">
-      <h1>The Meridian</h1>
-      <p class="sub">
-        A shared map: a knowledge garden at the edge of a knowledge forest.
-        If you want to build with us, you’re welcome here.
-      </p>
-    </div>
-
-    <div class="links" role="navigation" aria-label="Start here">
-      <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian/blob/main/ONBOARDING.md">
-        <span>Onboarding</span>
-        <small>Start small; learn the membranes; make your first PR.</small>
-      </a>
-      <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian/blob/main/0%20-%20Housekeeping/NAV.md">
-        <span>NAV</span>
-        <small>Table of contents + quick links.</small>
-      </a>
-      <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian/blob/main/CONTRIBUTING.md">
-        <span>Contributing</span>
-        <small>How we collaborate.</small>
-      </a>
-      <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian/blob/main/LICENSE.md">
-        <span>License (AFPP)</span>
-        <small>The ARX Foundation Public Pact (values-based license).</small>
-      </a>
-    </div>
-
-    <div class="footer">
-      <span>Contact: <a href="mailto:themeridian@hopefullyabysmal.com">themeridian@hopefullyabysmal.com</a></span>
-      <span>·</span>
-      <span><a href="snapshot.svg">Snapshot</a></span>
-    </div>
-  </section>
-</main>
-
-<script>
-  (function () {
-    const INTRO_MS = 2400;
-    const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function done() { document.body.classList.add("is-loaded"); }
-    if (prefersReduced) done();
-    else window.setTimeout(done, INTRO_MS);
-    document.getElementById("intro")?.addEventListener("click", done, { once: true });
-  })();
-</script>
+</section>
 </body>
 </html>

@@ -1,37 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="389" height="407" viewBox="0 0 389.4851468452472 407.431944874054">
-<rect width="100%" height="100%" fill="#0b0d12"/><line x1="202.68835756230544" y1="197.7118434891018" x2="319.4851468452472" y2="237.53291099417825" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="271.4861777735349" y2="337.431944874054" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="162.24460058544565" y2="330.64090044209274" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="220.1374015060519" y2="281.4024642203267" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="89.40421026129842" y2="263.3975270488578" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="70" y2="186.61063162664277" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="96.77704562722597" y2="113.50149529746245" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="164.683168232307" y2="70.523991769547" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="242.18122581211819" y2="70" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="202.68835756230544" y1="197.7118434891018" x2="313.88692308503306" y2="129.50410223340174" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="319.4851468452472" y1="237.53291099417825" x2="220.1374015060519" y2="281.4024642203267" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<line x1="162.24460058544565" y1="330.64090044209274" x2="271.4861777735349" y2="337.431944874054" stroke="rgba(100, 130, 180, 0.45)" stroke-width="1.2"/>
-<circle cx="202.68835756230544" cy="197.7118434891018" r="12" fill="#4f6fff"/>
-<text x="202.68835756230544" y="219.7118434891018" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">0 · Housekeeping</text>
-<circle cx="319.4851468452472" cy="237.53291099417825" r="9" fill="#3dd6c3"/>
-<text x="319.4851468452472" y="259.5329109941782" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">1 · People</text>
-<circle cx="271.4861777735349" cy="337.431944874054" r="9" fill="#3dd6c3"/>
-<text x="271.4861777735349" y="359.431944874054" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">2 · Projects</text>
-<circle cx="162.24460058544565" cy="330.64090044209274" r="9" fill="#3dd6c3"/>
-<text x="162.24460058544565" y="352.64090044209274" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">3 · Knowledge</text>
-<circle cx="220.1374015060519" cy="281.4024642203267" r="9" fill="#3dd6c3"/>
-<text x="220.1374015060519" y="303.4024642203267" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">4 · Guild</text>
-<circle cx="89.40421026129842" cy="263.3975270488578" r="9" fill="#3dd6c3"/>
-<text x="89.40421026129842" y="285.3975270488578" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">5 · Operations</text>
-<circle cx="70" cy="186.61063162664277" r="9" fill="#3dd6c3"/>
-<text x="70" y="208.61063162664277" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">6 · Archive</text>
-<circle cx="96.77704562722597" cy="113.50149529746245" r="9" fill="#e8a36c"/>
-<text x="96.77704562722597" y="135.50149529746244" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Egregore</text>
-<circle cx="164.683168232307" cy="70.523991769547" r="9" fill="#e8a36c"/>
-<text x="164.683168232307" y="92.523991769547" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Work context</text>
-<circle cx="242.18122581211819" cy="70" r="9" fill="#e8a36c"/>
-<text x="242.18122581211819" y="92" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Publication</text>
-<circle cx="313.88692308503306" cy="129.50410223340174" r="9" fill="#e8a36c"/>
-<text x="313.88692308503306" y="151.50410223340174" text-anchor="middle" fill="rgba(200, 210, 230, 0.5)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Membranes</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="401" height="417" viewBox="0 0 400.9179311412113 417.48755734880683">
+<rect width="100%" height="100%" fill="#0a0c10"/><line x1="202.07230625869676" y1="182.89480805535777" x2="330.9179311412113" y2="299.54607425275447" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="262.53632447908046" y2="276.997437287394" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="277.20277309066654" y2="347.48755734880683" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="208.8233805615432" y2="324.9461995722122" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="138.45080458552172" y2="300.0704504469056" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="70" y2="225.616666287517" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="153.14240301499004" y2="127.28638266609029" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="260.7112321858159" y2="70" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="202.07230625869676" y1="182.89480805535777" x2="316.25375603789024" y2="229.0575043851435" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="330.9179311412113" y1="299.54607425275447" x2="208.8233805615432" y2="324.9461995722122" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="277.20277309066654" y1="347.48755734880683" x2="262.53632447908046" y2="276.997437287394" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="194.15751883311026" y1="254.45508036529807" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="153.14240301499004" y1="127.28638266609029" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="153.14240301499004" y1="127.28638266609029" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="260.7112321858159" y1="70" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="316.25375603789024" y1="229.0575043851435" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="316.25375603789024" y1="229.0575043851435" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="330.9179311412113" y1="299.54607425275447" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="262.53632447908046" y1="276.997437287394" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="262.53632447908046" y1="276.997437287394" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="277.20277309066654" y1="347.48755734880683" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="277.20277309066654" y1="347.48755734880683" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="277.20277309066654" y1="347.48755734880683" x2="316.25375603789024" y2="229.0575043851435" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="208.8233805615432" y1="324.9461995722122" x2="316.25375603789024" y2="229.0575043851435" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="208.8233805615432" y1="324.9461995722122" x2="194.15751883311026" y2="254.45508036529807" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="208.8233805615432" y1="324.9461995722122" x2="273.14518841643496" y2="171.38904335486606" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="208.8233805615432" y1="324.9461995722122" x2="138.45080458552172" y2="300.0704504469056" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="138.45080458552172" y1="300.0704504469056" x2="70" y2="225.616666287517" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<line x1="138.45080458552172" y1="300.0704504469056" x2="316.25375603789024" y2="229.0575043851435" stroke="rgba(90, 120, 100, 0.35)" stroke-width="1.2"/>
+<circle cx="202.07230625869676" cy="182.89480805535777" r="12" fill="#6b7f72"/>
+<text x="202.07230625869676" y="204.89480805535777" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">0 · Housekeeping</text>
+<circle cx="330.9179311412113" cy="299.54607425275447" r="9" fill="#5a8a9e"/>
+<text x="330.9179311412113" y="321.54607425275447" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">1 · People</text>
+<circle cx="262.53632447908046" cy="276.997437287394" r="9" fill="#5a8a9e"/>
+<text x="262.53632447908046" y="298.997437287394" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">2 · Projects</text>
+<circle cx="277.20277309066654" cy="347.48755734880683" r="9" fill="#5a8a9e"/>
+<text x="277.20277309066654" y="369.48755734880683" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">3 · Knowledge</text>
+<circle cx="208.8233805615432" cy="324.9461995722122" r="9" fill="#5a8a9e"/>
+<text x="208.8233805615432" y="346.9461995722122" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">4 · Guild</text>
+<circle cx="138.45080458552172" cy="300.0704504469056" r="9" fill="#5a8a9e"/>
+<text x="138.45080458552172" y="322.0704504469056" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">5 · Operations</text>
+<circle cx="70" cy="225.616666287517" r="9" fill="#5a8a9e"/>
+<text x="70" y="247.616666287517" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">6 · Archive</text>
+<circle cx="194.15751883311026" cy="254.45508036529807" r="9" fill="#b89a6a"/>
+<text x="194.15751883311026" y="276.45508036529804" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Egregore</text>
+<circle cx="153.14240301499004" cy="127.28638266609029" r="9" fill="#b89a6a"/>
+<text x="153.14240301499004" y="149.28638266609028" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Guides</text>
+<circle cx="260.7112321858159" cy="70" r="9" fill="#b89a6a"/>
+<text x="260.7112321858159" y="92" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Membranes</text>
+<circle cx="273.14518841643496" cy="171.38904335486606" r="9" fill="#b89a6a"/>
+<text x="273.14518841643496" y="193.38904335486606" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Publication</text>
+<circle cx="316.25375603789024" cy="229.0575043851435" r="9" fill="#b89a6a"/>
+<text x="316.25375603789024" y="251.0575043851435" text-anchor="middle" fill="rgba(200, 210, 200, 0.55)" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">Work-context</text>
 </svg>
