@@ -1,0 +1,20 @@
+{
+  "name": "the-equator",
+  "version": "0.1.0",
+  "description": "Real-time Discord link and audit ingestion for The Meridian KB.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "node --watch index.mjs",
+    "export:links": "node export.mjs",
+    "export:audit": "node export.mjs --audit-only",
+    "export:all": "node export.mjs"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.0"
+  }
+}
