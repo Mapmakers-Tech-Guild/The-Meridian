@@ -1,11 +1,10 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+# Optional fallback: build repo root with Jekyll + deploy to Pages.
+#
+# This repo’s primary Pages deployment is `.github/workflows/pages.yml` (graph intro → landing).
+# Keep this workflow manual-only to avoid dueling deployments to the same `github-pages` environment.
+name: (manual) Deploy Jekyll fallback
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
