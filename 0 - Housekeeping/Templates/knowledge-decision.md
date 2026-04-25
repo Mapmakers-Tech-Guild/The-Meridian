@@ -12,4 +12,4 @@ audience: shared
 
 ## Summary
 
-## Rationale (redact as needed for export — [Publication doc](../Publication/PUBLICATION-AND-RELEASE.md).)
+## Rationale (see [Publication doc](../Publication/PUBLICATION-AND-RELEASE.md) if this might export.)

@@ -7,7 +7,7 @@ audience: internal
 
 # Title
 
-*From a private zettel or staging vault: redact PII; do not paste Egregore-only handoffs here unless intentionally shared.*
+*From a private zettel or staging vault: strip PII; only copy Egregore handoffs here if you mean to share them in this repo.*
 
 ## Idea (fit for this repo)
 

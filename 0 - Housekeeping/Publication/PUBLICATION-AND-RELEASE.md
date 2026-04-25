@@ -4,12 +4,13 @@
 
 ---
 
-## 1. Why interop and redaction matter
+## 1. Link closure on export
 
-- **Obsidian-style links** (`[[Note]]`, relative `../other-project/foo`) assume a **known tree**. Exporting a **subset** breaks links to notes **outside** the bundle.
-- **Cross-project** references in this repo are fine for daily work; for export, use **link closure** (ship all targets) or **redaction** / rewrites.
+**Obsidian-style links** (`[[Note]]`, relative `../other-project/foo`) assume a **known tree**. Exporting a **subset** without its targets breaks links.
 
-**Rule:** every release = a **bundle** with explicit closure, or a **redaction pass** listing broken targets.
+- **Bundle:** include link targets, or **rewrite** links and list what changed.
+
+**Check:** a release is either a **closed bundle** (in-bundle links resolve) or an explicit list of **rewritten** / **dropped** targets.
 
 ---
 
@@ -17,7 +18,7 @@
 
 1. Select by `status` / `release_track` / manifest.  
 2. Resolve wikilinks against the **bundle**; warn on out-of-bundle targets.  
-3. **Redaction map** (path prefixes, strip internal sections).  
+3. **Path / section filters** (prefixes, strip internal sections if needed).  
 4. Emit to publications repo, `dist/`, or per-project remote.
 
 ---
@@ -37,8 +38,6 @@ depends_on_published: []
 replaces_link_to: []
 ```
 
-(See full semantics in prior commits if you need the long version — `status` / `release_track` values unchanged.)
-
 ---
 
 ## 4. Alternatives without automation
@@ -55,7 +54,7 @@ replaces_link_to: []
 | --- | --- |
 | Egregore `memory/` | Private operational mind. |
 | **This repo (Mapmakers shared KB)** | Durable guild knowledge. |
-| **Publications / vault (future repo)** | Wider audience, redacted. |
+| **Publications / vault (future repo)** | Wider audience; material edited for that surface. |
 | **Per-project publish repos** | When cross-link surface is small. |
 
 See [../Egregore/VS-SHARED-KB.md](../Egregore/VS-SHARED-KB.md) and [../Egregore/INTEROP.md](../Egregore/INTEROP.md).

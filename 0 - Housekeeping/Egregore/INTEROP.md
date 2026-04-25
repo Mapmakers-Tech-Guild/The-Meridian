@@ -16,7 +16,7 @@ A **publications** export is separate — see [../Publication/PUBLICATION-AND-RE
 | `0 - Housekeeping/Guides/*` or long writeups | `artifacts/…` or `knowledge/patterns/*` | One canonical home. |
 | `2 - Projects/*` | `projects/*.md` | |
 | `1 - People/*.md` (humans) | Summarize to **`people/{github}.md`** as needed | No duplicate `personas/` tree in `memory/`. |
-| `4 - Guild/ops/personas/*` (agent packs) | **Do not** create `ops/` in Egregore — distil facts into `people/{github}.md` or a pattern note. |
+| `4 - Guild/ops/personas/*` (agent packs) | **Avoid** a separate `ops/` tree in Egregore — distil into `people/{github}.md` or a pattern note. |
 | `infrastructure` (if you add) | `infrastructure/` | No secrets. |
 | — | `handoffs/`, `wraps/`, `quests/`, `meetings/`, `research/` | Egregore-native; private record stays in memory. |
 
@@ -31,6 +31,6 @@ A **publications** export is separate — see [../Publication/PUBLICATION-AND-RE
 
 - Do **not** symlink this whole repo into `memory/`.  
 - Do **not** use `personas/` folders in `memory/`.  
-- **Shared → Egregore:** material should already be guild-acceptable; redact as needed for private copy.
+- **Shared → Egregore:** keep content appropriate for `memory/` when you copy; trim what should stay private.
 
 [← Egregore index](./README.md) · [VS-SHARED-KB](./VS-SHARED-KB.md) · [Redirect](./VS-OPEN-REDIRECT.md)

@@ -19,7 +19,7 @@
 | Old filename redirect | [Egregore/VS-OPEN-REDIRECT.md](./Egregore/VS-OPEN-REDIRECT.md) |
 | Membranes & Git visibility | [Membranes/BRANCHES-AND-PUBLISHING.md](./Membranes/BRANCHES-AND-PUBLISHING.md) |
 | Personal / work / company | [Work-context/membrane-routing.md](./Work-context/membrane-routing.md) |
-| Work KB **vs** Mapmakers (shape) | [Work-context/company-knowledge-pointer.md](./Work-context/company-knowledge-pointer.md) |
+| Work KB vs Mapmakers (shape) | [Work-context/company-knowledge-pointer.md](./Work-context/company-knowledge-pointer.md) |
 | Publication & export | [Publication/PUBLICATION-AND-RELEASE.md](./Publication/PUBLICATION-AND-RELEASE.md) |
 | How to use this tree | [Guides/how-to-use-shared-kb.md](./Guides/how-to-use-shared-kb.md) |
 | Templates | [Templates/README.md](./Templates/README.md) |

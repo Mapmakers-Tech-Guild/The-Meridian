@@ -10,4 +10,4 @@
 
 **Not** the same as **0 - Housekeeping** (nav, templates, Egregore) or **4 - Guild/ops** (agent persona packs) — *operations* = how humans run the *organization*.
 
-[6 - Archive/](../6%20-%20Archive/README.md) · [NAV](../0%20-%20Housekeeping/NAV.md) · [Work KB vs Mapmakers (shape)](../0%20-%20Housekeeping/Work-context/company-knowledge-pointer.md) · [Repo entrypoint](../README.md)
+[6 - Archive/](../6%20-%20Archive/README.md) · [NAV](../0%20-%20Housekeeping/NAV.md) · [Work KB vs Mapmakers](../0%20-%20Housekeeping/Work-context/company-knowledge-pointer.md) · [Repo entrypoint](../README.md)

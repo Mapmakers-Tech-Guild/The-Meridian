@@ -1,6 +1,6 @@
 # 0 — Housekeeping
 
-Navigation, cross-cutting docs (Egregore, work/personal **membranes**, publication), **templates** (Zettel-style), and **guides** — same *role* as a typical org vault’s `0` / `00` housekeeping, adapted for **Mapmakers** (see [company-knowledge pointer](./Work-context/company-knowledge-pointer.md)).
+Navigation, cross-cutting docs (Egregore, work/personal **membranes**, publication), **templates** (Zettel-style), and **guides** — same *role* as a typical org vault’s `0` / `00` housekeeping, adapted for **Mapmakers** (see [work KB vs Mapmakers](./Work-context/company-knowledge-pointer.md)).
 
 - **NAV:** [NAV.md](./NAV.md)  
 - **Egregore:** [Egregore/](./Egregore/)  
