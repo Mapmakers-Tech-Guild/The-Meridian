@@ -16,4 +16,6 @@
 
 **When you have both a company KB and this repo:** company = policy, employment, customer-tenant. Mapmakers = **guild** craft, [Egregore interop](../Egregore/INTEROP.md), and shared *team* content only.
 
+**Where the maintainer learns structure from (local paths):** [learning-sources.md](./learning-sources.md)
+
 [IA routing](./kb-ia-routing.md) · [NAV](../NAV.md)

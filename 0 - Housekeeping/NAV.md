@@ -20,6 +20,7 @@
 | Membranes & Git visibility | [Membranes/BRANCHES-AND-PUBLISHING.md](./Membranes/BRANCHES-AND-PUBLISHING.md) |
 | Personal / work / company | [IA/kb-ia-routing.md](./IA/kb-ia-routing.md) |
 | Company-KB pattern (IA) | [IA/company-knowledge-pointer.md](./IA/company-knowledge-pointer.md) |
+| **Local structure notes** | [IA/learning-sources.md](./IA/learning-sources.md) |
 | Publication & export | [Publication/PUBLICATION-AND-RELEASE.md](./Publication/PUBLICATION-AND-RELEASE.md) |
 | How to use this tree | [Guides/how-to-use-shared-kb.md](./Guides/how-to-use-shared-kb.md) |
 | Templates | [Templates/README.md](./Templates/README.md) |

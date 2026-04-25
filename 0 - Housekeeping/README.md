@@ -4,7 +4,7 @@ Navigation, cross-cutting docs (Egregore, org-vault style membranes, publication
 
 - **NAV:** [NAV.md](./NAV.md)  
 - **Egregore:** [Egregore/](./Egregore/)  
-- **IA / membranes:** [IA/kb-ia-routing.md](./IA/kb-ia-routing.md) · [IA/company-knowledge-pointer.md](./IA/company-knowledge-pointer.md)  
+- **IA / membranes:** [IA/kb-ia-routing.md](./IA/kb-ia-routing.md) · [IA/company-knowledge-pointer.md](./IA/company-knowledge-pointer.md) · [IA/learning-sources.md](./IA/learning-sources.md) (local structure notes)  
 - **Templates:** [Templates/](./Templates/)  
 - **How to use:** [Guides/how-to-use-shared-kb.md](./Guides/how-to-use-shared-kb.md)
 
