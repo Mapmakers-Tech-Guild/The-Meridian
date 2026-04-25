@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 78" role="img" aria-labelledby="t1 t2">
+  <title id="t1">The Meridian</title>
+  <desc id="t2">Title with a thin vertical stroke suggesting a line of longitude against a dark field.</desc>
+  <defs>
+    <linearGradient id="merStroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6a7cff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#9a9ad4" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#4a5a9a" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#0b0d12"/>
+  <!-- Meridian line: northsouth reference -->
+  <line x1="36" y1="10" x2="36" y2="68" stroke="url(#merStroke)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="14" x2="40" y2="64" stroke="rgba(120,140,200,0.25)" stroke-width="1" stroke-linecap="round"/>
+  <text
+    x="280"
+    y="40"
+    text-anchor="middle"
+    font-family="Baskerville, 'Palatino Linotype', Palatino, 'Book Antiqua', 'URW Palladio L', Georgia, serif"
+    font-size="28"
+    font-style="italic"
+    font-weight="500"
+    letter-spacing="0.12em"
+    fill="#f0f0fa"
+  >The Meridian</text>
+  <text
+    x="280"
+    y="64"
+    text-anchor="middle"
+    font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+    font-size="11.5"
+    font-weight="500"
+    letter-spacing="0.28em"
+    fill="#8b92b0"
+  >MAPMAKERS ù KNOWLEDGE BASE</text>
+</svg>

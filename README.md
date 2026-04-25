@@ -1,18 +1,18 @@
-# Mapmakers Knowledgebase
+# The Meridian
 
 <p align="center">
   <img src="assets/kb-graph/kb-graph-snapshot-edges.svg" width="440" alt="Force-directed knowledge graph (same d3 layout as the full snapshot), edges only — no nodes" />
   <br />
-  <img src="assets/readme-brand/the-mapmakers-title.svg" width="480" alt="The Mapmaker’s Knowledgebase" />
+  <img src="assets/readme-brand/the-meridian-title.svg" width="520" alt="The Meridian — Mapmakers knowledge base, with a vertical meridian stroke" />
 </p>
 
-The graph is the **same gravity layout** as [`kb-graph-snapshot.svg`](assets/kb-graph/kb-graph-snapshot.svg), rendered **nodeless** ([`kb-graph-snapshot-edges.svg`](assets/kb-graph/kb-graph-snapshot-edges.svg), produced by [`build-kb-graph.mjs`](scripts/build-kb-graph.mjs)). Title: [`the-mapmakers-title.svg`](assets/readme-brand/the-mapmakers-title.svg) — **Baskerville / Palatino** stack, map-label–style italic.
+**The Meridian** is the project name: a **meridian** in geography is a **great circle** through both poles — your **line of longitude**. Navigators pick a **prime meridian** (today **0°** at **Greenwich**) as the **shared origin** for east–west measure even though the choice is **convention**. **Local solar noon** is when the sun crosses *your* meridian: the instant the day’s arc **aligns** on that north–south slice.
 
-*Cartography-flavored synonyms for “knowledge base”:* an **atlas** is a collection of maps; a **gazetteer** is a geographic index of placenames (and often notes). Either can work metaphorically; this repo keeps plain **knowledge base** in prose.
+> **Why we like the symbol** — a meridian is **one spine in a busier world**: not the territory, not the index of every name — the **axis you set the clock to**. The **graph** above is the **mesh of relations**; this repo is the **reference** the guild measures from. Hero uses the same d3 **layout** as the [full snapshot](assets/kb-graph/kb-graph-snapshot.svg), drawn **nodeless** in the banner ([`kb-graph-snapshot-edges.svg`](assets/kb-graph/kb-graph-snapshot-edges.svg), [`build-kb-graph.mjs`](scripts/build-kb-graph.mjs)). The title bar ([`the-meridian-title.svg`](assets/readme-brand/the-meridian-title.svg)) is **Baskerville / Palatino** italics on `#0b0d12` with a **vertical stroke** (the meridian line).
 
 **Start here:** [0 - Housekeeping/NAV.md](0%20-%20Housekeeping/NAV.md) — full map and table of contents.
 
-This repository is the **Mapmakers shared knowledge base** (Zettel-style **0–6** areas: Housekeeping, People, Projects, Knowledge, Guild, **Operations**, **Archive**). No other files on repo root.
+This repository is still the **Mapmakers** shared **knowledge base** (Zettel-style **0–6** areas: Housekeeping, People, Projects, Knowledge, Guild, **Operations**, **Archive**). No other files on repo root.
 
 **Numbered “rooms”** (same idea as an index set — these are **real** TeX renders, stored as SVG in-repo so they show in the IDE, on mobile, and on GitHub):
 
