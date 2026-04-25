@@ -1,10 +1,10 @@
 # 0 — Housekeeping
 
-Navigation, cross-cutting docs (Egregore, work/personal **membranes**, publication), **templates** (Zettel-style), and **guides** — same *role* as a typical org vault’s `0` / `00` housekeeping, adapted for **Mapmakers** (see [company-knowledge pointer](./IA/company-knowledge-pointer.md)).
+Navigation, cross-cutting docs (Egregore, work/personal **membranes**, publication), **templates** (Zettel-style), and **guides** — same *role* as a typical org vault’s `0` / `00` housekeeping, adapted for **Mapmakers** (see [company-knowledge pointer](./Work-context/company-knowledge-pointer.md)).
 
 - **NAV:** [NAV.md](./NAV.md)  
 - **Egregore:** [Egregore/](./Egregore/)  
-- **Membranes / work vs this repo:** [IA/kb-ia-routing.md](./IA/kb-ia-routing.md) · [IA/company-knowledge-pointer.md](./IA/company-knowledge-pointer.md)  
+- **Membranes / work vs this repo:** [Work-context/membrane-routing.md](./Work-context/membrane-routing.md) · [Work-context/company-knowledge-pointer.md](./Work-context/company-knowledge-pointer.md)  
 - **Templates:** [Templates/](./Templates/)  
 - **How to use:** [Guides/how-to-use-shared-kb.md](./Guides/how-to-use-shared-kb.md)
 

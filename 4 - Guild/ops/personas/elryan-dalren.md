@@ -19,7 +19,7 @@ Use when an **agent** in guild tooling needs a compressed view of how to work wi
 ## When generating or automating
 
 - Prefer **summaries**; do not invent private relay or company facts.  
-- Boundaries: [Membranes / routing](../../../0%20-%20Housekeeping/IA/kb-ia-routing.md) · [Egregore vs this KB](../../../0%20-%20Housekeeping/Egregore/VS-SHARED-KB.md).  
+- Boundaries: [Membranes / routing](../../../0%20-%20Housekeeping/Work-context/membrane-routing.md) · [Egregore vs this KB](../../../0%20-%20Housekeeping/Egregore/VS-SHARED-KB.md).  
 - Export: [Publication](../../../0%20-%20Housekeeping/Publication/PUBLICATION-AND-RELEASE.md).
 
 [ops personas](./README.md) · [4 — Guild](../../README.md)

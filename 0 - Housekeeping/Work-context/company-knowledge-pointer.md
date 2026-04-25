@@ -16,4 +16,4 @@ Work trees often have something like **`03-Ops\knowledgebase\`** with **`00 - Ho
 
 **If you have both a work vault and this repo:** work = org policy, employment, client work. **Mapmakers** = guild + [Egregore interop](../Egregore/INTEROP.md) and shared *team* content that fits the export you intend.
 
-[Membranes / routing](./kb-ia-routing.md) — personal vs Egregore vs this repo · [NAV](../NAV.md)
+[Membranes / routing](./membrane-routing.md) — personal vs Egregore vs this repo · [NAV](../NAV.md)
