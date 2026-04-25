@@ -1,5 +1,8 @@
 # Publish interactive kb-graph to GitHub Pages (full URL; README cannot iframe).
-# Repo → Settings → Pages → Build: GitHub Actions (one-time).
+# Prereq: private repos need Pro/Team/Enterprise — Free only gets Pages for public repos
+#   (https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#who-can-use-this-feature).
+# Otherwise deploy-pages returns 404. If this repo stays private on Free, disable this workflow or host _site elsewhere.
+# One-time: Settings → Pages → Source: GitHub Actions.
 name: Deploy Pages (interactive map)
 
 on:
