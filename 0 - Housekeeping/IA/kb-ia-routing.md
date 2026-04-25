@@ -1,6 +1,6 @@
 # Where knowledge lives (membranes, no path names)
 
-> **Intentionally avoids** fixed paths on anyone’s machine (IA / work / personal layout varies).
+> **Intentionally avoids** fixed paths on anyone’s machine (work / personal / employer layout varies).
 
 ## Membranes
 
