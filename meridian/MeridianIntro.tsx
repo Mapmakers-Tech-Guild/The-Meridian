@@ -14,7 +14,7 @@ export default (() => {
           <p class="meridian-intro__kicker">The Meridian</p>
           <p class="meridian-intro__meta">Edges trace the living map — from housekeeping out to the seven areas, membranes, and the links you add between them.</p>
           <div class="meridian-intro__stage" id="meridian-intro-stage" />
-          <p class="meridian-intro__hint">Click to enter · or wait</p>
+          <p class="meridian-intro__hint">Click anywhere to enter</p>
         </div>
       </div>
     )
