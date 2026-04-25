@@ -12,6 +12,22 @@ This repository is the **Mapmakers shared knowledge base** (Zettel-style **0–6
 
 ---
 
+## Geometric map (precompiled on `main`)
+
+Each push to **`main`** runs [`kb-graph.yml`](.github/workflows/kb-graph.yml): **d3-force** layout → committed **SVG** + self-contained **HTML** (CSS stagger: nodes in rough **git-chronology** for areas `0–6`, then satellites; edges draw after). No Mermaid — this is a real pre-rendered layout you can ship.
+
+**Snapshot** (static; shows in the README everywhere):
+
+<p align="center">
+  <img src="assets/kb-graph/kb-graph-snapshot.svg" width="520" alt="Stylized force-directed map of Mapmakers areas 0 through 6 and Housekeeping satellites" />
+</p>
+
+**Animated** (chronological reveal): clone the repo and open [`assets/kb-graph/kb-graph-animated.html`](assets/kb-graph/kb-graph-animated.html) in a browser (GitHub’s file view won’t execute the animation — it’s a local/preview page). Build metadata: [`assets/kb-graph/kb-graph.json`](assets/kb-graph/kb-graph.json).
+
+**Hack locally:** `npm ci` then set `CHRONO=git` and run `npm run build:graph` (e.g. bash: `CHRONO=git npm run build:graph` · PowerShell: `$env:CHRONO='git'; npm run build:graph`). Source: [`scripts/build-kb-graph.mjs`](scripts/build-kb-graph.mjs). Optional [**vis-network** playground](kb-graph.html) at repo root for draggable tuning.
+
+---
+
 ## Fancy math (actually rendered)
 
 ` ```math ` blocks only draw on **github.com**; your editor preview often shows **raw LaTeX**.  
@@ -36,8 +52,6 @@ So: the good stuff below is **[CodeCogs](https://www.codecogs.com/latex/eqnedito
 </p>
 
 *Optional vibecheck:* ship a **closed bundle** of notes or pay the **boundary** cost on export — same energy as keeping **V − E + F** honest for the face-count you’re actually publishing.
-
-**Live graph toy:** open [kb-graph.html](kb-graph.html) in a browser from your clone (draggable force layout). The README can’t run JS; the HTML file can.
 
 <details>
 <summary>LaTeX source (for copy-paste; renders on <strong>github.com</strong> with MathJax)</summary>

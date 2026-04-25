@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapmakers Knowledgebase — graph</title>
+  <style>
+    :root {
+      --bg: #0d0f14;
+      --panel: #13161d;
+      --line: #2a3140;
+      --text: #c5cad8;
+      --muted: #7a8499;
+      --accent: #8b7cff;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text);
+      font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif; }
+    #app { display: flex; height: 100%; flex-direction: column; }
+    header {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 0.6rem 1rem; background: var(--panel); border-bottom: 1px solid var(--line);
+      font-size: 0.9rem; flex-wrap: wrap;
+    }
+    header h1 { margin: 0; font-size: 1rem; font-weight: 600; letter-spacing: 0.02em; }
+    header p { margin: 0; color: var(--muted); font-size: 0.8rem; }
+    #net { flex: 1; min-height: 0; }
+    #hud {
+      position: fixed; right: 12px; bottom: 12px; max-width: min(320px, 90vw);
+      background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+      padding: 10px 12px; font-size: 0.78rem; line-height: 1.4; color: var(--text);
+      pointer-events: none; box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    #hud kbd { background: #1c212c; padding: 1px 5px; border-radius: 4px; color: var(--accent); }
+    a.repo { color: var(--accent); text-decoration: none; }
+    a.repo:hover { text-decoration: underline; }
+  </style>
+  <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Mapmakers KB — live map</h1>
+      <p>Drag · scroll to zoom · click a node</p>
+      <a class="repo" href="0%20-%20Housekeeping/NAV.md" title="NAV in repo">NAV (markdown) →</a>
+    </header>
+    <div id="net"></div>
+  </div>
+  <div id="hud">
+    <span id="tip">Select a node for its path. Physics settle after a few seconds — drag to rearrange.</span>
+  </div>
+  <script>
+(function () {
+  const C = {
+    core:  "#4f6fff",
+    area:  "#3dd6c3",
+    house: "#e8985e",
+    cross: "#9b8cff",
+  };
+
+  const nodes = new vis.DataSet([
+    { id: "0",  label: "0 · Housekeeping",  group: "core",  title: "0 - Housekeeping/", shape: "dot", size: 22 },
+    { id: "1",  label: "1 · People",        group: "area",  title: "1 - People/ — humans", shape: "dot" },
+    { id: "2",  label: "2 · Projects",    group: "area",  title: "2 - Projects/", shape: "dot" },
+    { id: "3",  label: "3 · Knowledge",   group: "area",  title: "3 - Knowledge/ patterns", shape: "dot" },
+    { id: "4",  label: "4 · Guild",       group: "area",  title: "4 - Guild/ · ops personas", shape: "dot" },
+    { id: "5",  label: "5 · Operations",  group: "area",  title: "5 - Operations/", shape: "dot" },
+    { id: "6",  label: "6 · Archive",     group: "area",  title: "6 - Archive/", shape: "dot" },
+    { id: "eg",  label: "Egregore",        group: "house", title: "0 - Housekeeping/Egregore/", shape: "box" },
+    { id: "ctx", label: "Work context",  group: "house", title: "0 - Housekeeping/Work-context/", shape: "box" },
+    { id: "pub", label: "Publication",    group: "house", title: "0 - Housekeeping/Publication/", shape: "box" },
+    { id: "mex", label: "Membranes",      group: "house", title: "0 - Housekeeping/Membranes/", shape: "box" },
+  ]);
+
+  const edges = new vis.DataSet([
+    { from: "0", to: "1" }, { from: "0", to: "2" }, { from: "0", to: "3" },
+    { from: "0", to: "4" }, { from: "0", to: "5" }, { from: "0", to: "6" },
+    { from: "0", to: "eg" }, { from: "0", to: "ctx" }, { from: "0", to: "pub" }, { from: "0", to: "mex" },
+    { from: "1", to: "4", dashes: true, title: "humans vs agent packs" },
+    { from: "3", to: "2", dashes: true, title: "patterns ↔ projects" },
+  ]);
+
+  const container = document.getElementById("net");
+  const data = { nodes, edges };
+  const options = {
+    nodes: {
+      font: { color: "#c5cad8", size: 14, face: "ui-sans-serif" },
+      borderWidth: 0,
+      shadow: true,
+      scaling: { min: 10, max: 24 },
+    },
+    edges: {
+      width: 1.2,
+      color: { color: "#3a4356", highlight: "#8b7cff", hover: "#6a7388" },
+      smooth: { type: "continuous" },
+    },
+    physics: {
+      enabled: true,
+      barnesHut: { gravitationalConstant: -2800, centralGravity: 0.12, springLength: 120, springConstant: 0.05 },
+      stabilization: { iterations: 180, updateInterval: 25 },
+    },
+    interaction: { hover: true, tooltipDelay: 80, multiselect: false },
+  };
+
+  options.groups = {
+    core:  { color: { background: C.core,  border: C.core } },
+    area:  { color: { background: C.area,  border: C.area } },
+    house: { color: { background: C.house, border: C.house } },
+  };
+
+  const network = new vis.Network(container, data, options);
+
+  network.on("stabilizationIterationsDone", function () {
+    network.setOptions({ physics: { enabled: false } });
+  });
+
+  network.on("click", function (e) {
+    if (e.nodes.length === 0) {
+      document.getElementById("tip").textContent =
+        "Select a node for its path. Drag nodes to rearrange after physics stops.";
+      return;
+    }
+    const id = e.nodes[0];
+    const n = nodes.get(id);
+    const path = n.title || n.label;
+    document.getElementById("tip").innerHTML = "<strong>" + (n.label || id) + "</strong><br/>" + path;
+  });
+})();
+  </script>
+</body>
+</html>

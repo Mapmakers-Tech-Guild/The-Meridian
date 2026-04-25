@@ -1,0 +1,49 @@
+# Precompile stylized KB map (d3 force → SVG + animated HTML) on every push to main.
+# Auto-commit uses [skip ci] so the workflow does not loop.
+name: KB map (precompile graph)
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: kb-graph-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build map (git-weighted animation order)
+        run: npm run build:graph
+        env:
+          CHRONO: git
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/kb-graph
+          if git diff --staged --quiet; then
+            echo "No changes to kb-graph assets."
+            exit 0
+          fi
+          git commit -m "chore(kb-graph): sync generated map [skip ci]"
+          git push
