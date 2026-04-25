@@ -14,10 +14,13 @@ const target = join(root, "quartz", ".quartz-cache");
 const linkPath = join(root, "node_modules", "@jackyzha0", "quartz", "quartz", ".quartz-cache");
 
 // If vendored quartz accidentally contains a symlinked cache dir, remove it to avoid loops.
-if (existsSync(target)) {
+// Use lstatSync (not existsSync) — existsSync follows symlinks and returns false for
+// circular/dangling symlinks, leaving the bad entry in place.
+let targetSt = null;
+try { targetSt = lstatSync(target); } catch { /* path does not exist */ }
+if (targetSt !== null) {
   try {
-    const st = lstatSync(target);
-    if (st.isSymbolicLink()) rmSync(target, { recursive: true, force: true });
+    if (targetSt.isSymbolicLink()) rmSync(target, { recursive: true, force: true });
   } catch {
     rmSync(target, { recursive: true, force: true });
   }
