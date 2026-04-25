@@ -1,5 +1,11 @@
 # Mapmakers Knowledgebase
 
+<p align="center">
+  <img src="assets/readme-brand/mapmakers-wordmark.svg" width="480" alt="Mapmakers: the letters m and a, then a nodeless line graph forming the letter p, then makers — on a dark banner" />
+</p>
+
+Wordmark: **nodeless graph as the “p”** ([`mapmakers-wordmark.svg`](assets/readme-brand/mapmakers-wordmark.svg) · compact [`mapmakers-wordmark-compact.svg`](assets/readme-brand/mapmakers-wordmark-compact.svg)). Edit strokes in place; swap `font-family` in the SVG if you adopt a licensed display face later.
+
 **Start here:** [0 - Housekeeping/NAV.md](0%20-%20Housekeeping/NAV.md) — full map and table of contents.
 
 This repository is the **Mapmakers shared knowledge base** (Zettel-style **0–6** areas: Housekeeping, People, Projects, Knowledge, Guild, **Operations**, **Archive**). No other files on repo root.

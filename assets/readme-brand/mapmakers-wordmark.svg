@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 88" role="img" aria-labelledby="title desc">
+  <title id="title">Mapmakers wordmark</title>
+  <desc id="desc">The word mapmakers with the letter p replaced by a nodeless line graph on a dark field.</desc>
+  <defs>
+    <linearGradient id="letterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ececf8"/>
+      <stop offset="100%" stop-color="#b8b8d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="6" fill="#0b0d12"/>
+  <text x="20" y="58" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="42" font-weight="600" fill="url(#letterGrad)" letter-spacing="-0.02em">ma</text>
+  <!-- Nodeless graph as p: left stem + hub-and-spoke bowl (stroke only, no vertices drawn) -->
+  <g transform="translate(100, 10)" fill="none" stroke="#9a9ad4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.96">
+    <line x1="22" y1="12" x2="22" y2="70"/>
+    <line x1="22" y1="36" x2="44" y2="22"/>
+    <line x1="44" y1="22" x2="74" y2="26"/>
+    <line x1="74" y1="26" x2="90" y2="44"/>
+    <line x1="90" y1="44" x2="82" y2="62"/>
+    <line x1="82" y1="62" x2="58" y2="70"/>
+    <line x1="58" y1="70" x2="34" y2="64"/>
+    <line x1="34" y1="64" x2="22" y2="44"/>
+    <line x1="22" y1="44" x2="30" y2="26"/>
+    <line x1="30" y1="26" x2="44" y2="22"/>
+    <line x1="58" y1="34" x2="74" y2="26"/>
+    <line x1="58" y1="34" x2="82" y2="62"/>
+    <line x1="74" y1="26" x2="58" y2="34"/>
+    <line x1="90" y1="44" x2="58" y2="34"/>
+    <line x1="48" y1="52" x2="58" y2="70"/>
+    <line x1="48" y1="52" x2="82" y2="62"/>
+  </g>
+  <text x="218" y="58" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="42" font-weight="600" fill="url(#letterGrad)" letter-spacing="-0.02em">makers</text>
+</svg>
