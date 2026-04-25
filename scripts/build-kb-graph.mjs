@@ -317,7 +317,7 @@ function buildPreviewHtml({ nodes, links, w, h, nref }, builtAt) {
     </div>
 
     <div class="footer">
-      <span>Contact: <a href="mailto:60dayrunway@hopefullyabysmal.com">60dayrunway@hopefullyabysmal.com</a></span>
+      <span>Contact: <a href="mailto:themeridian@hopefullyabysmal.com">themeridian@hopefullyabysmal.com</a></span>
       <span>·</span>
       <span><a href="snapshot.svg">Snapshot</a></span>
     </div>

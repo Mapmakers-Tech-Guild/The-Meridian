@@ -16,4 +16,4 @@ If you want to build with us, you’re welcome here.
 - **License (AFPP)**: [`LICENSE.md`](LICENSE.md)
 - **MOU + CLAs**: [`LEGAL/`](LEGAL/)
 
-Contact: `60dayrunway@hopefullyabysmal.com` (put “Meridian” in the subject).
+Contact: `themeridian@hopefullyabysmal.com` (put “Meridian” in the subject).

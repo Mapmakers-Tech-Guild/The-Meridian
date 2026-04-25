@@ -2,6 +2,8 @@
 
 The Meridian is a shared map for Mapmakers: a knowledge garden at the edge of a knowledge forest.
 
+**GitHub Pages is just a small router** right now: a short “intro + landing” on site, and the main reading/editing still happens on GitHub (issues/PRs + the markdown in this repo). A **Quartz** site is the next step for a true digital-garden / browse experience with search + backlinks. See: [`docs/QUARTZ-NOTES.md`](docs/QUARTZ-NOTES.md).
+
 If you’re new, start small. A good first contribution is a single note with clean links.
 
 ## Start here
@@ -38,7 +40,7 @@ This repo uses the **ARX Foundation Public Pact (AFPP)**.
   - [`LEGAL/Individual-Contributor-CLA.md`](LEGAL/Individual-Contributor-CLA.md) *or*
   - [`LEGAL/Entity-Contributor-CLA.md`](LEGAL/Entity-Contributor-CLA.md)
 
-Email the signed docs to `60dayrunway@hopefullyabysmal.com` (subject: “Meridian — MOU/CLA”).
+Email the signed docs to `themeridian@hopefullyabysmal.com` (subject: “Meridian — MOU/CLA”).
 
 ## What we’re looking for
 

@@ -153,5 +153,5 @@ Let’s build something new — together, in the open, for the long run.
 
 — Landon Dahle // Elryan the Explorer  
 Founder, The ARX Foundation  
-60dayrunway@hopefullyabysmal.com
+themeridian@hopefullyabysmal.com
 
