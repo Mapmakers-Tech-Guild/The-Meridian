@@ -196,35 +196,39 @@ function buildPreviewHtml({ nodes, links, w, h, nref }, builtAt) {
     edgesSvg += `<line class="edge" x1="${a.px}" y1="${a.py}" x2="${b.px}" y2="${b.py}" stroke="${COL.lineHi}" stroke-width="1.2" style="--len:${L}; animation-delay:${delay}s"/>`;
   }
 
-  let nodesSvg = "";
-  for (const n of nSorted) {
-    const r = n.kind === "core" ? 12 : 9;
-    const delay = 0.08 * n.order;
-    nodesSvg += `<g class="node" style="--d:${delay}s" transform="translate(${n.px},${n.py})">
-<circle r="${r}" fill="${kindColor(n.kind)}" class="n-dot"/>
-<text y="20" text-anchor="middle" fill="${COL.sub}" font-size="9" font-family="ui-sans-serif,system-ui,sans-serif">${n.label
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")}</text>
-</g>\n`;
-  }
-
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>The Meridian — generated map</title>
+<title>The Meridian</title>
 <style>
   * { box-sizing: border-box; }
   body { margin:0; background:${COL.bg}; color:${COL.text}; font-family: ui-sans-serif, system-ui, sans-serif; }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 1rem; }
-  h1 { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; }
-  p.meta { color: ${COL.sub}; font-size: 0.75rem; margin: 0.2rem 0 1rem; }
-  .stage { border-radius: 10px; overflow: hidden; border: 1px solid rgba(120,150,200,.15);
-    box-shadow: 0 12px 48px rgba(0,0,0,.45); }
+  a { color: #8b7cff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Intro (loading) overlay */
+  .intro {
+    position: fixed; inset: 0;
+    display: grid; place-items: center;
+    background: radial-gradient(1200px 700px at 50% 40%, rgba(139,124,255,0.12), rgba(11,13,18,0.0) 60%), ${COL.bg};
+    z-index: 10;
+    transition: opacity 650ms ease, visibility 650ms ease;
+  }
+  body.is-loaded .intro { opacity: 0; visibility: hidden; pointer-events: none; }
+  .introInner { width: min(820px, 92vw); padding: 20px; }
+  .introTitle { margin: 0 0 10px; font-size: 0.9rem; letter-spacing: 0.14em; font-weight: 650; color: rgba(220,230,250,0.9); }
+  .introMeta { margin: 0 0 16px; color: ${COL.sub}; font-size: 0.78rem; }
+  .stage {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(120,150,200,.14);
+    box-shadow: 0 12px 56px rgba(0,0,0,.55);
+    background: rgba(0,0,0,0.08);
+  }
   svg { display: block; width: 100%; height: auto; }
-  @keyframes pop { from { opacity: 0; transform: scale(0.35); } to { opacity: 1; transform: scale(1); } }
-  .node { transform-box: fill-box; transform-origin: center; animation: pop 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) var(--d) both; }
+
   @keyframes draw {
     from { stroke-dashoffset: 120; }
     to { stroke-dashoffset: 0; }
@@ -233,23 +237,103 @@ function buildPreviewHtml({ nodes, links, w, h, nref }, builtAt) {
     stroke-dasharray: 120; stroke-dashoffset: 120;
     animation: draw 0.5s ease-out both;
   }
+
+  /* Landing */
+  main { min-height: 100vh; display: grid; place-items: center; padding: 46px 18px; }
+  .card {
+    width: min(920px, 92vw);
+    border-radius: 14px;
+    border: 1px solid rgba(120,150,200,.14);
+    background: rgba(18,22,31,0.45);
+    box-shadow: 0 18px 80px rgba(0,0,0,.55);
+    padding: 26px 22px;
+    backdrop-filter: blur(10px);
+  }
+  .hero { display: grid; gap: 14px; align-items: center; grid-template-columns: 1fr; }
+  .hero h1 { margin: 0; font-size: 1.6rem; letter-spacing: 0.03em; }
+  .sub { margin: 0; color: ${COL.sub}; line-height: 1.6; }
+  .links { margin-top: 16px; display: grid; gap: 10px; }
+  .links a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(120,150,200,.12);
+  }
+  .links a span { color: rgba(220,230,250,0.92); font-weight: 600; }
+  .links a small { display: block; margin-top: 4px; color: ${COL.sub}; font-size: 0.82rem; }
+  .footer { margin-top: 14px; font-size: 0.78rem; color: ${COL.sub}; display:flex; gap:10px; flex-wrap: wrap; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .edge { animation: none; stroke-dashoffset: 0; }
+    .intro { transition: none; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>The Meridian — precompiled map</h1>
-  <p class="meta">Regenerated on push to <code>main</code> · ${builtAt} · <a style="color:#8b7cff" href="https://github.com/Mapmakers-Tech-Guild/The-Meridian#readme">README</a></p>
-  <div class="stage">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${Math.round(
-    w
-  )}" height="${Math.round(h)}">
-<rect width="100%" height="100%" fill="${COL.bg}"/>
-${edgesSvg}
-${nodesSvg}
-</svg>
+<div class="intro" id="intro">
+  <div class="introInner">
+    <p class="introTitle">THE MERIDIAN</p>
+    <p class="introMeta">Loading map · ${builtAt} · <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian">Repo</a></p>
+    <div class="stage" aria-label="The Meridian — edges-only intro">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${Math.round(
+        w
+      )}" height="${Math.round(h)}">
+        <rect width="100%" height="100%" fill="${COL.bg}"/>
+        ${edgesSvg}
+      </svg>
+    </div>
+    <p class="introMeta" style="margin-top:12px">Tip: click to skip.</p>
   </div>
-  <p class="meta" style="margin-top:0.8rem">Replay: hard refresh. Chronological order: Housekeeping first, then areas 1–6, then satellites; optional <code>CHRONO=git</code> in the build script to bias order by first git touch.</p>
 </div>
+
+<main>
+  <section class="card">
+    <div class="hero">
+      <h1>The Meridian</h1>
+      <p class="sub">
+        A shared map: a knowledge garden at the edge of a knowledge forest.
+        If you want to build with us, you’re welcome here.
+      </p>
+    </div>
+
+    <div class="links" role="navigation" aria-label="Start here">
+      <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian/blob/main/ONBOARDING.md">
+        <span>Onboarding</span>
+        <small>Start small; learn the membranes; make your first PR.</small>
+      </a>
+      <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian/blob/main/0%20-%20Housekeeping/NAV.md">
+        <span>NAV</span>
+        <small>Table of contents + quick links.</small>
+      </a>
+      <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian/blob/main/CONTRIBUTING.md">
+        <span>Contributing</span>
+        <small>How we collaborate.</small>
+      </a>
+      <a href="https://github.com/Mapmakers-Tech-Guild/The-Meridian/blob/main/LICENSE.md">
+        <span>License (AFPP)</span>
+        <small>The ARX Foundation Public Pact (values-based license).</small>
+      </a>
+    </div>
+
+    <div class="footer">
+      <span>Contact: <a href="mailto:60dayrunway@hopefullyabysmal.com">60dayrunway@hopefullyabysmal.com</a></span>
+      <span>·</span>
+      <span><a href="snapshot.svg">Snapshot</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function () {
+    const INTRO_MS = 2400;
+    const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function done() { document.body.classList.add("is-loaded"); }
+    if (prefersReduced) done();
+    else window.setTimeout(done, INTRO_MS);
+    document.getElementById("intro")?.addEventListener("click", done, { once: true });
+  })();
+</script>
 </body>
 </html>`;
 }
