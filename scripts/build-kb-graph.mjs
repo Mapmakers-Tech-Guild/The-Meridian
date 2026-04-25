@@ -136,6 +136,23 @@ function kindColor(k) {
   return COL.sat;
 }
 
+function buildEdgesOnlySvg({ nodes, links, w, h, nref }) {
+  let s = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${Math.round(w)}" height="${Math.round(
+    h
+  )}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Mapmakers knowledge graph — edges only, same d3 force layout as the full snapshot">
+<rect width="100%" height="100%" fill="${COL.bg}"/>`;
+  for (const l of links) {
+    const a = nref(l.source);
+    const b = nref(l.target);
+    s += `<line x1="${a.px}" y1="${a.py}" x2="${b.px}" y2="${b.py}" stroke="${
+      COL.line
+    }" stroke-width="1.2" stroke-linecap="round"/>\n`;
+  }
+  s += `</svg>`;
+  return s;
+}
+
 function buildSnapshotSvg({ nodes, links, w, h, nref }) {
   const E = (s) =>
     s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
@@ -243,8 +260,10 @@ function main() {
   const layout = runLayout();
   const builtAt = new Date().toISOString().replace(/\.\d+Z$/, "Z");
   const svg = buildSnapshotSvg(layout);
+  const edgesOnly = buildEdgesOnlySvg(layout);
   const html = buildPreviewHtml(layout, builtAt);
   writeFileSync(join(outDir, "kb-graph-snapshot.svg"), svg, "utf-8");
+  writeFileSync(join(outDir, "kb-graph-snapshot-edges.svg"), edgesOnly, "utf-8");
   writeFileSync(join(outDir, "kb-graph-animated.html"), html, "utf-8");
   const meta = { builtAt, nodeCount: layout.nodes.length, edgeCount: layout.links.length };
   writeFileSync(join(outDir, "kb-graph.json"), JSON.stringify(meta, null, 2), "utf-8");

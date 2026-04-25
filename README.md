@@ -1,10 +1,14 @@
 # Mapmakers Knowledgebase
 
 <p align="center">
-  <img src="assets/readme-brand/mapmakers-wordmark.svg" width="480" alt="Mapmakers: the letters m and a, then a nodeless line graph forming the letter p, then makers — on a dark banner" />
+  <img src="assets/kb-graph/kb-graph-snapshot-edges.svg" width="440" alt="Force-directed knowledge graph (same d3 layout as the full snapshot), edges only — no nodes" />
+  <br />
+  <img src="assets/readme-brand/the-mapmakers-title.svg" width="480" alt="The Mapmaker’s Knowledgebase" />
 </p>
 
-Wordmark: **nodeless graph as the “p”** ([`mapmakers-wordmark.svg`](assets/readme-brand/mapmakers-wordmark.svg) · compact [`mapmakers-wordmark-compact.svg`](assets/readme-brand/mapmakers-wordmark-compact.svg)). Edit strokes in place; swap `font-family` in the SVG if you adopt a licensed display face later.
+The graph is the **same gravity layout** as [`kb-graph-snapshot.svg`](assets/kb-graph/kb-graph-snapshot.svg), rendered **nodeless** ([`kb-graph-snapshot-edges.svg`](assets/kb-graph/kb-graph-snapshot-edges.svg), produced by [`build-kb-graph.mjs`](scripts/build-kb-graph.mjs)). Title: [`the-mapmakers-title.svg`](assets/readme-brand/the-mapmakers-title.svg) — **Baskerville / Palatino** stack, map-label–style italic.
+
+*Cartography-flavored synonyms for “knowledge base”:* an **atlas** is a collection of maps; a **gazetteer** is a geographic index of placenames (and often notes). Either can work metaphorically; this repo keeps plain **knowledge base** in prose.
 
 **Start here:** [0 - Housekeeping/NAV.md](0%20-%20Housekeeping/NAV.md) — full map and table of contents.
 
@@ -20,7 +24,7 @@ This repository is the **Mapmakers shared knowledge base** (Zettel-style **0–6
 
 ## Geometric map (precompiled on `main`)
 
-Each push to **`main`** runs [`kb-graph.yml`](.github/workflows/kb-graph.yml): **d3-force** layout → committed **SVG** + self-contained **HTML** (CSS stagger: nodes in rough **git-chronology** for areas `0–6`, then satellites; edges draw after). No Mermaid — this is a real pre-rendered layout you can ship.
+Each push to **`main`** runs [`kb-graph.yml`](.github/workflows/kb-graph.yml): **d3-force** layout → committed **SVG** + **edges-only SVG** + self-contained **HTML** (CSS stagger: nodes in rough **git-chronology** for areas `0–6`, then satellites; edges draw after). No Mermaid — this is a real pre-rendered layout you can ship.
 
 **Snapshot** (static; shows in the README everywhere):
 
