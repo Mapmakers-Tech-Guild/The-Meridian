@@ -11,7 +11,9 @@
     "build:graph": "node scripts/build-kb-graph.mjs",
     "build:site": "npm run check:links && node scripts/vend-quartz.mjs && node scripts/ensure-quartz-cache-link.mjs && npm run build:graph && npx quartz build -d . -o public && node scripts/collect-meridian-assets.mjs",
     "test:build": "node scripts/test-build.mjs",
-    "export:discord-links": "node scripts/export-discord-links.mjs"
+    "export:discord-links": "node scripts/export-discord-links.mjs",
+    "export:discord-audit": "node scripts/export-discord-links.mjs --audit-only",
+    "export:discord-all": "node scripts/export-discord-links.mjs"
   },
   "devDependencies": {
     "@jackyzha0/quartz": "github:jackyzha0/quartz#v4",
