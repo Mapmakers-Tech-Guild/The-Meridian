@@ -140,7 +140,7 @@ function buildEdgesOnlySvg({ nodes, links, w, h, nref }) {
   let s = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${Math.round(w)}" height="${Math.round(
     h
-  )}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Mapmakers knowledge graph — edges only, same d3 force layout as the full snapshot">
+  )}" viewBox="0 0 ${w} ${h}" role="img" aria-label="The Meridian — knowledge graph edges only, same d3 force layout as the full snapshot">
 <rect width="100%" height="100%" fill="${COL.bg}"/>`;
   for (const l of links) {
     const a = nref(l.source);
@@ -213,7 +213,7 @@ function buildPreviewHtml({ nodes, links, w, h, nref }, builtAt) {
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mapmakers KB — generated map</title>
+<title>The Meridian — generated map</title>
 <style>
   * { box-sizing: border-box; }
   body { margin:0; background:${COL.bg}; color:${COL.text}; font-family: ui-sans-serif, system-ui, sans-serif; }
@@ -237,8 +237,8 @@ function buildPreviewHtml({ nodes, links, w, h, nref }, builtAt) {
 </head>
 <body>
 <div class="wrap">
-  <h1>Mapmakers knowledge base — precompiled map</h1>
-  <p class="meta">Regenerated on push to <code>main</code> · ${builtAt} · <a style="color:#8b7cff" href="https://github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase#readme">README</a></p>
+  <h1>The Meridian — precompiled map</h1>
+  <p class="meta">Regenerated on push to <code>main</code> · ${builtAt} · <a style="color:#8b7cff" href="https://github.com/Mapmakers-Tech-Guild/The-Meridian#readme">README</a></p>
   <div class="stage">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${Math.round(
     w

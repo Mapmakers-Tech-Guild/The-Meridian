@@ -1,4 +1,4 @@
-# Mapmakers Knowledgebase — navigation
+# The Meridian (Mapmakers knowledge base) — navigation
 
 | # | Area | What lives there |
 | --- | --- | --- |
@@ -24,4 +24,4 @@
 | How to use this tree | [Guides/how-to-use-shared-kb.md](./Guides/how-to-use-shared-kb.md) |
 | Templates | [Templates/README.md](./Templates/README.md) |
 
-**Remote:** [github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase](https://github.com/Mapmakers-Tech-Guild/Mapmakers-Knowledgebase)
+**Remote:** [github.com/Mapmakers-Tech-Guild/The-Meridian](https://github.com/Mapmakers-Tech-Guild/The-Meridian)

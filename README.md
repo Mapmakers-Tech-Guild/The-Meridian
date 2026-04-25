@@ -1,74 +1,73 @@
 # The Meridian
 
 <p align="center">
-  <img src="assets/kb-graph/kb-graph-snapshot-edges.svg" width="440" alt="Force-directed knowledge graph (same d3 layout as the full snapshot), edges only — no nodes" />
+  <img src="assets/kb-graph/kb-graph-snapshot-edges.svg" width="440" alt="Force-directed knowledge graph, edges only, same d3 layout as the full map" />
   <br />
-  <img src="assets/readme-brand/the-meridian-title.svg" width="520" alt="The Meridian — Mapmakers knowledge base, with a vertical meridian stroke" />
+  <img src="assets/readme-brand/the-meridian-title.svg" width="520" alt="The Meridian — Mapmakers knowledge base" />
 </p>
 
-**The Meridian** is the project name: a **meridian** in geography is a **great circle** through both poles — your **line of longitude**. Navigators pick a **prime meridian** (today **0°** at **Greenwich**) as the **shared origin** for east–west measure even though the choice is **convention**. **Local solar noon** is when the sun crosses *your* meridian: the instant the day’s arc **aligns** on that north–south slice.
+This place used to be named like a file cabinet. We call it **The Meridian** now: in cartography, a **meridian** is the line between the poles — the north–south thread that every longitude shares, so *east* and *west* can mean something when the world is too wide to see all at once.
 
-> **Why we like the symbol** — a meridian is **one spine in a busier world**: not the territory, not the index of every name — the **axis you set the clock to**. The **graph** above is the **mesh of relations**; this repo is the **reference** the guild measures from. Hero uses the same d3 **layout** as the [full snapshot](assets/kb-graph/kb-graph-snapshot.svg), drawn **nodeless** in the banner ([`kb-graph-snapshot-edges.svg`](assets/kb-graph/kb-graph-snapshot-edges.svg), [`build-kb-graph.mjs`](scripts/build-kb-graph.mjs)). The title bar ([`the-meridian-title.svg`](assets/readme-brand/the-meridian-title.svg)) is **Baskerville / Palatino** italics on `#0b0d12` with a **vertical stroke** (the meridian line).
+*Knowledge base* — two words, not a product slug. A friend, **christinab**, said it so it would stick: a **knowledge base** by the **knowledge gardens**, in the hush of the **knowledge forest** — the beds you tend, the wild you walk through, the clearing you come back to when your hands are full of something worth keeping.
 
-**Start here:** [0 - Housekeeping/NAV.md](0%20-%20Housekeeping/NAV.md) — full map and table of contents.
+**We’re walking the line, aren’t we?** You leave it on purpose when you explore — the beyond needs distance — but we all need **a point of reference**: a place to set **noon**, to measure a day against, to say *this* is the spine I’m measuring from, even when the path bends.
 
-This repository is still the **Mapmakers** shared **knowledge base** (Zettel-style **0–6** areas: Housekeeping, People, Projects, Knowledge, Guild, **Operations**, **Archive**). No other files on repo root.
+**New tools, new map, for new landscapes.** The graph above is that mesh — the same d3 *gravity* as the [full map](assets/kb-graph/kb-graph-snapshot.svg), drawn [without nodes](assets/kb-graph/kb-graph-snapshot-edges.svg) in the banner so the strokes stay light. Titles: [`the-meridian-title.svg`](assets/readme-brand/the-meridian-title.svg). Build: [`build-kb-graph.mjs`](scripts/build-kb-graph.mjs) · [`kb-graph.yml`](.github/workflows/kb-graph.yml).
 
-**Numbered “rooms”** (same idea as an index set — these are **real** TeX renders, stored as SVG in-repo so they show in the IDE, on mobile, and on GitHub):
+*Thread that seeded this, late one evening — The Explorer & christinab, with coffee or close enough to it.*
+
+---
+
+**Start here:** [0 - Housekeeping/NAV.md](0%20-%20Housekeeping/NAV.md) — the table of contents and quick links.
+
+The **Mapmakers** guild’s shared vault: Zettel-style **0–6** (Housekeeping, People, Projects, Knowledge, Guild, **Operations**, **Archive**). Nothing else at repo root.
+
+**Numbered rooms** (real TeX → SVG, so it renders everywhere you read this file):
 
 <p align="center">
-  <img src="assets/readme-math/index-set.svg" width="420" alt="The set of area indices 0 through 6, labeled as numbered areas" />
+  <img src="assets/readme-math/index-set.svg" width="420" alt="The set of area indices 0 through 6" />
 </p>
 
 ---
 
 ## Geometric map (precompiled on `main`)
 
-Each push to **`main`** runs [`kb-graph.yml`](.github/workflows/kb-graph.yml): **d3-force** layout → committed **SVG** + **edges-only SVG** + self-contained **HTML** (CSS stagger: nodes in rough **git-chronology** for areas `0–6`, then satellites; edges draw after). No Mermaid — this is a real pre-rendered layout you can ship.
+Each push to **`main`** runs [`kb-graph.yml`](.github/workflows/kb-graph.yml): **d3-force** → committed **SVG** + **edges-only** + **HTML** (animation staggers by rough git order for `0–6`, then satellites). No Mermaid — ship real layout, not a diagram spec.
 
-**Snapshot** (static; shows in the README everywhere):
+**Snapshot:**
 
 <p align="center">
-  <img src="assets/kb-graph/kb-graph-snapshot.svg" width="520" alt="Stylized force-directed map of Mapmakers areas 0 through 6 and Housekeeping satellites" />
+  <img src="assets/kb-graph/kb-graph-snapshot.svg" width="520" alt="Map of areas 0–6 and Housekeeping satellites" />
 </p>
 
-**Animated (chronological reveal)**  
-GitHub **does not allow `<iframe>` in READMEs** (sanitized HTML — no embedded live apps). For real interactivity, use a **hosted** page:
-
-- **Live site (GitHub Pages):** [mapmakers-tech-guild.github.io/Mapmakers-Knowledgebase](https://mapmakers-tech-guild.github.io/Mapmakers-Knowledgebase/) — static build from [`pages.yml`](.github/workflows/pages.yml) on every push to `main` (or run **Actions → Deploy Pages (interactive map) → Run workflow**). **One-time (after the repo is public):** in this repository go to **Settings → Pages** → under **Build and deployment** set **Source** to **GitHub Actions** and save — then re-run the workflow or push to `main` so the first deploy completes. *Do not put secrets* in the built map or committed assets; the **site is world-readable** like any public URL. *If the repo is ever private on GitHub Free again,* [Pages for private repos](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#who-can-use-this-feature) requires a paid plan — otherwise disable `pages.yml` or host the `_site` output elsewhere.  
-- **From a clone:** open [`assets/kb-graph/kb-graph-animated.html`](assets/kb-graph/kb-graph-animated.html) locally. Build metadata: [`assets/kb-graph/kb-graph.json`](assets/kb-graph/kb-graph.json).
-
-**Hack locally:** `npm ci` then set `CHRONO=git` and run `npm run build:graph` (e.g. bash: `CHRONO=git npm run build:graph` · PowerShell: `$env:CHRONO='git'; npm run build:graph`). Source: [`scripts/build-kb-graph.mjs`](scripts/build-kb-graph.mjs). Optional [**vis-network** playground](kb-graph.html) at repo root for draggable tuning.
+**Animated** — GitHub won’t run your `<iframe>` in a README, so the live canvas lives off-site: **[GitHub Pages](https://mapmakers-tech-guild.github.io/The-Meridian/)** (from [`pages.yml`](.github/workflows/pages.yml), or a clone: [`kb-graph-animated.html`](assets/kb-graph/kb-graph-animated.html)). *Pages needs the repo’s **Settings → Pages → GitHub Actions** one-time; public or paid private.* Build with `npm ci`, `CHRONO=git`, `npm run build:graph`. Playground: [`kb-graph.html`](kb-graph.html).
 
 ---
 
 ## Fancy math (actually rendered)
 
-` ```math ` blocks only draw on **github.com**; your editor preview often shows **raw LaTeX**.  
-So: the good stuff below is **[CodeCogs](https://www.codecogs.com/latex/eqneditor.php) → SVG**, committed under [`assets/readme-math/`](assets/readme-math/) — **vector math, not Unicode hacks.**
+` ```math ` only paints on **github.com**; your editor may show **raw LaTeX**. These are **CodeCogs → SVG** in [`assets/readme-math/`](assets/readme-math/).
 
-**Shannon entropy** — how “surprising” a distribution of topics is. Low: everything piles in one bucket. High: mass is spread (fine if the **graph still closes**).
-
-<p align="center">
-  <img src="assets/readme-math/entropy.svg" width="360" alt="H of X equals negative sum over i of p_i log p_i" />
-</p>
-
-**Cauchy–Schwarz** — inner products don’t outrun the norms.
+**Shannon entropy** — how “surprising” a distribution is.
 
 <p align="center">
-  <img src="assets/readme-math/cauchy-schwarz.svg" width="520" alt="Cauchy-Schwarz inequality: sum a_k b_k squared leq sum a_k squared times sum b_k squared" />
+  <img src="assets/readme-math/entropy.svg" width="360" alt="H of X equals negative sum p_i log p_i" />
 </p>
 
-**Euler (planar graph)** — Vertices, edges, faces: **V, E, F** (count the outer face too). A silly reason to like **link closure**: your drawn map of notes ought to be **embeddable** if you want classical planar invariants to line up.
+**Cauchy–Schwarz**
+
+<p align="center">
+  <img src="assets/readme-math/cauchy-schwarz.svg" width="520" alt="Cauchy–Schwarz inequality" />
+</p>
+
+**Euler (planar graph)** — count the outer face. Link-closure invariants, if you like that kind of story.
 
 <p align="center">
   <img src="assets/readme-math/euler.svg" width="200" alt="V minus E plus F equals 2" />
 </p>
 
-*Optional vibecheck:* ship a **closed bundle** of notes or pay the **boundary** cost on export — same energy as keeping **V − E + F** honest for the face-count you’re actually publishing.
-
 <details>
-<summary>LaTeX source (for copy-paste; renders on <strong>github.com</strong> with MathJax)</summary>
+<summary>LaTeX (renders on github.com with MathJax)</summary>
 
 ```math
 H(X) = - \sum_{i} p_i \log p_i
@@ -82,10 +81,10 @@ H(X) = - \sum_{i} p_i \log p_i
 V - E + F = 2
 ```
 
-[Writing mathematical expressions](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions) · MathJax
+[Mathematical expressions on GitHub](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 
 </details>
 
 ---
 
-*Courtesy of the ARX Foundation* — the maintainer’s non-profit; it holds the IP for work contributed here.
+*In the same spirit as the [ARX Foundation](https://github.com/The-ARX-Foundation)’s public work — open by default.*
