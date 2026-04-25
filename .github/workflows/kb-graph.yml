@@ -1,10 +1,19 @@
-# Precompile stylized KB map (d3 force → SVG + animated HTML) on every push to main.
-# Auto-commit uses [skip ci] so the workflow does not loop.
-name: KB map (precompile graph)
+# Optional: precompile the KB map and commit `assets/kb-graph/` back to the repo.
+# This does NOT deploy GitHub Pages. The live site is built by
+#   "Deploy Pages (interactive map)" (pages.yml) → `npm run build:site` → public/
+#
+# Run manually if you want the repo to contain up-to-date SVG/HTML previews for browsing on GitHub.
+# [skip ci] avoids triggering extra workflows in many setups; Pages still deploys from your last push
+# to main when you use the main deploy workflow.
+name: Sync precompiled map to repo (no Pages deploy)
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
+
+# Uncomment to also sync map assets on every push to main (creates a second “green” run per commit):
+# on:
+#   push:
+#     branches: [main]
 
 concurrency:
   group: kb-graph-${{ github.ref }}
@@ -12,7 +21,7 @@ concurrency:
 
 jobs:
   build:
-    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip ci]'))
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -25,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
 
       - name: Install
@@ -35,6 +44,7 @@ jobs:
         run: npm run build:graph
         env:
           CHRONO: git
+          SITE_BASE: /The-Meridian/
 
       - name: Commit generated assets
         run: |
@@ -47,3 +57,7 @@ jobs:
           fi
           git commit -m "chore(kb-graph): sync generated map [skip ci]"
           git push
+
+      - name: Reminder
+        run: |
+          echo "::notice::The live site is updated by the workflow: Deploy Pages (interactive map (pages.yml)). This job only updates committed files in assets/kb-graph/."
