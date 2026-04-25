@@ -62,7 +62,9 @@ function initMeridian() {
         line.setAttribute("y2", String(L.y2))
         line.setAttribute("stroke", topo.stroke)
         line.setAttribute("stroke-width", "1.2")
-        if (L.delay != null) line.setAttribute("style", `animation-delay: ${L.delay}s`)
+        const dash = Math.ceil(L.L)
+        const styleStr = `stroke-dasharray: ${dash}; stroke-dashoffset: ${dash}${L.delay != null ? `; animation-delay: ${L.delay}s` : ""}`
+        line.setAttribute("style", styleStr)
         svg.appendChild(line)
       }
       stage.appendChild(svg)

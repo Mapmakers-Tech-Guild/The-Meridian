@@ -101,8 +101,6 @@ body.meridian-reveal #quartz-body {
 
 /* ── Edge draw animation ── */
 .meridian-line {
-  stroke-dasharray: 120;
-  stroke-dashoffset: 120;
   animation: meridianDraw 0.5s ease-out both;
 }
 
