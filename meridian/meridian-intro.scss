@@ -4,9 +4,26 @@
   z-index: 40;
   display: grid;
   place-items: center;
-  background: radial-gradient(1000px 600px at 50% 35%, rgba(100, 130, 110, 0.11), rgba(7, 9, 8, 0) 60%),
-    #070908;
-  transition: opacity 0.65s ease, visibility 0.65s ease, transform 0.65s ease;
+  /* Topographic stack: map grid → contour rings → centre glow → base */
+  background:
+    linear-gradient(rgba(148, 168, 152, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 168, 152, 0.04) 1px, transparent 1px),
+    radial-gradient(ellipse 90% 60% at 50% 46%, transparent 27%, rgba(118, 152, 136, 0.055) 28%, transparent 30%),
+    radial-gradient(ellipse 70% 46% at 50% 46%, transparent 27%, rgba(118, 152, 136, 0.065) 28%, transparent 30%),
+    radial-gradient(ellipse 50% 32% at 50% 46%, transparent 27%, rgba(118, 152, 136, 0.08)  28%, transparent 30%),
+    radial-gradient(ellipse 30% 19% at 50% 46%, transparent 27%, rgba(118, 152, 136, 0.10)  28%, transparent 30%),
+    radial-gradient(1100px 640px at 50% 36%, rgba(110, 148, 130, 0.13), rgba(6, 9, 8, 0) 64%),
+    #060a08;
+  background-size:
+    44px 44px,
+    44px 44px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  transition: opacity 0.7s ease, visibility 0.7s ease, transform 0.7s ease;
   pointer-events: auto;
   overscroll-behavior: contain;
 }
@@ -15,60 +32,64 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(-6px);
+  transform: translateY(-8px);
 }
 
 body.meridian-reveal #quartz-body {
   filter: none;
 }
 
+/* Subtle vignette over the grid */
 .meridian-intro__hatch {
   position: absolute;
   inset: 0;
-  opacity: 0.2;
-  background-image: repeating-linear-gradient(
-      115deg,
-      rgba(150, 170, 150, 0.06) 0 1px,
-      transparent 1px 14px
-    ),
-    repeating-linear-gradient(
-      25deg,
-      rgba(100, 120, 100, 0.05) 0 1px,
-      transparent 1px 18px
-    );
-  mix-blend-mode: soft-light;
+  background: radial-gradient(ellipse 100% 100% at 50% 50%, transparent 40%, rgba(6, 9, 8, 0.55) 100%);
   pointer-events: none;
 }
 
 .meridian-intro__inner {
   position: relative;
-  width: min(820px, 92vw);
-  padding: 1.25rem;
+  width: min(860px, 92vw);
+  padding: 1.5rem 1.25rem;
 }
 
+/* ── Map-title label ── */
 .meridian-intro__kicker {
-  margin: 0 0 0.4rem 0;
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
+  margin: 0 0 0.15rem 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gray);
-  font-weight: 600;
+  color: color-mix(in srgb, var(--gray) 70%, transparent);
+  font-weight: 500;
+  /* thin rule beneath to echo a map border */
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--tertiary) 18%, transparent);
+  margin-bottom: 0.75rem;
 }
 
+/* ── Cartouche / description ── */
 .meridian-intro__meta {
-  margin: 0 0 0.9rem 0;
+  margin: 0 0 1rem 0;
   color: var(--gray);
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 52ch;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 56ch;
+  font-style: italic;
+  letter-spacing: 0.01em;
 }
 
+/* ── Map stage frame ── */
 .meridian-intro__stage {
-  border-radius: 12px;
+  border-radius: 6px;
   overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--tertiary) 28%, transparent);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
-  background: rgba(0, 0, 0, 0.1);
+  /* Double border like a classic map frame */
+  outline: 1px solid color-mix(in srgb, var(--tertiary) 18%, transparent);
+  outline-offset: 4px;
+  border: 1px solid color-mix(in srgb, var(--tertiary) 32%, transparent);
+  box-shadow:
+    0 0 0 5px color-mix(in srgb, var(--tertiary) 8%, transparent),
+    0 16px 56px rgba(0, 0, 0, 0.52);
+  background: rgba(0, 0, 0, 0.08);
   min-height: 120px;
 }
 
@@ -78,6 +99,7 @@ body.meridian-reveal #quartz-body {
   height: auto;
 }
 
+/* ── Edge draw animation ── */
 .meridian-line {
   stroke-dasharray: 120;
   stroke-dashoffset: 120;
@@ -85,18 +107,16 @@ body.meridian-reveal #quartz-body {
 }
 
 @keyframes meridianDraw {
-  from {
-    stroke-dashoffset: 120;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+  to { stroke-dashoffset: 0; }
 }
 
+/* ── Hint / caption ── */
 .meridian-intro__hint {
-  margin: 0.65rem 0 0 0;
-  font-size: 0.78rem;
-  color: var(--gray);
+  margin: 0.8rem 0 0 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: color-mix(in srgb, var(--gray) 65%, transparent);
+  text-transform: uppercase;
 }
 
 @media (prefers-reduced-motion: reduce) {

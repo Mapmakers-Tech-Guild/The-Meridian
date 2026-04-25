@@ -1,50 +1,65 @@
 # Onboarding — The Meridian
 
-The Meridian is a shared map for Mapmakers: a knowledge garden at the edge of a knowledge forest.
+The Meridian is a shared map for Mapmakers: a knowledge garden at the edge of a knowledge forest. It lives at [mapmakers-tech-guild.github.io/The-Meridian](https://mapmakers-tech-guild.github.io/The-Meridian) — a full Quartz site with search, backlinks, and the edges-only vault map on the intro.
 
-**GitHub Pages is just a small router** right now: a short “intro + landing” on site, and the main reading/editing still happens on GitHub (issues/PRs + the markdown in this repo). A **Quartz** site is the next step for a true digital-garden / browse experience with search + backlinks. See: [`docs/QUARTZ-NOTES.md`](docs/QUARTZ-NOTES.md).
+If you're new, start small. A good first contribution is a single note with clean links.
 
-If you’re new, start small. A good first contribution is a single note with clean links.
+## Navigate the site
 
-## Start here
+- **Intro animation** — the animated edges map shows how the seven areas connect. Click through or wait.
+- **Left sidebar** — search, dark mode toggle, and the full explorer tree.
+- **Right sidebar** — the local graph (notes around the current page) and backlinks.
+- **NAV** — [`0 - Housekeeping/NAV.md`](0%20-%20Housekeeping/NAV.md) is the canonical table of contents.
 
-- **Read the NAV**: [`0 - Housekeeping/NAV.md`](0%20-%20Housekeeping/NAV.md)
-- **Pick a place to work**: the tree is numbered `0–6` (Housekeeping, People, Projects, Knowledge, Guild, Operations, Archive). See: [`0 - Housekeeping/Guides/how-to-use-shared-kb.md`](0%20-%20Housekeeping/Guides/how-to-use-shared-kb.md)
+## How the tree is organized
 
-## How to contribute (practical)
+The repo is split into seven numbered areas:
 
-- **Fork or branch**, then open a PR.
-- Keep changes **small** and **scoped** (one note, one guide, one pattern).
-- Prefer **links** over tag piles. Link “up” to sources and “sideways” to related ideas.
-- Use a template if it fits:
-  - Default note template: [`0 - Housekeeping/Templates/Note (Zettelkasten - Mapmakers).md`](0%20-%20Housekeeping/Templates/Note%20(Zettelkasten%20-%20Mapmakers).md)
-  - Pattern/finding/decision templates: [`0 - Housekeeping/Templates/`](0%20-%20Housekeeping/Templates/)
+| # | Area | What goes here |
+|---|------|----------------|
+| 0 | Housekeeping | NAV, templates, guides, Egregore |
+| 1 | People | One file per member |
+| 2 | Projects | Project blurbs and links |
+| 3 | Knowledge | Patterns, findings, Zettelkasten notes |
+| 4 | Guild | Guild structure, agent packs |
+| 5 | Operations | Runbooks and SOPs |
+| 6 | Archive | Cold or superseded material |
 
-## Membranes (what belongs where)
+Pick the area that fits and go from there.
 
-This repo is **public**. Don’t push anything you’d regret being mirrored.
+## How to contribute
 
-- **Private operational mind** (Egregore `memory/`): not here. See: [`0 - Housekeeping/Egregore/VS-SHARED-KB.md`](0%20-%20Housekeeping/Egregore/VS-SHARED-KB.md)
-- **Shared guild knowledge** (this repo): durable notes and guides people can read later.
-- **Export/publications** (if/when we do bundles): see [`0 - Housekeeping/Publication/PUBLICATION-AND-RELEASE.md`](0%20-%20Housekeeping/Publication/PUBLICATION-AND-RELEASE.md)
+1. **Fork or branch**, then open a PR.
+2. Keep changes **small and scoped** — one note, one guide, one pattern per PR.
+3. Prefer **links** over tag piles. Link up to sources and sideways to related ideas.
+4. Use a template if it fits:
+   - Default note: [`0 - Housekeeping/Templates/Note (Zettelkasten - Mapmakers).md`](0%20-%20Housekeeping/Templates/Note%20(Zettelkasten%20-%20Mapmakers).md)
+   - Pattern / finding / decision templates: [`0 - Housekeeping/Templates/`](0%20-%20Housekeeping/Templates/)
 
-If you’re unsure, default to **less**. You can always publish more later; you can’t unpublish a leaked secret.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contributor guide.
 
-## Legal (required for contributors)
+## Membranes — what belongs here
+
+This repo is **public**. Don't push anything you'd regret being mirrored.
+
+- **Private operational memory** (Egregore `memory/`): not here. See [`0 - Housekeeping/Egregore/VS-SHARED-KB.md`](0%20-%20Housekeeping/Egregore/VS-SHARED-KB.md).
+- **Shared guild knowledge** (this repo): durable notes and guides others can read later.
+- **Publications** (bundles, releases): see [`0 - Housekeeping/Publication/PUBLICATION-AND-RELEASE.md`](0%20-%20Housekeeping/Publication/PUBLICATION-AND-RELEASE.md).
+
+When in doubt, default to **less**. You can always publish more later; you can't unpublish a leaked secret.
+
+## Legal (required before contributing)
 
 This repo uses the **ARX Foundation Public Pact (AFPP)**.
 
 - **License**: [`LICENSE.md`](LICENSE.md)
-- **To contribute**: send a completed **MOU** and the right **CLA**:
+- **To contribute**, email a signed **MOU** and the right **CLA** to `themeridian@hopefullyabysmal.com` (subject: "Meridian — MOU/CLA"):
   - [`LEGAL/Memorandum-of-Understanding.md`](LEGAL/Memorandum-of-Understanding.md)
   - [`LEGAL/Individual-Contributor-CLA.md`](LEGAL/Individual-Contributor-CLA.md) *or*
   - [`LEGAL/Entity-Contributor-CLA.md`](LEGAL/Entity-Contributor-CLA.md)
 
-Email the signed docs to `themeridian@hopefullyabysmal.com` (subject: “Meridian — MOU/CLA”).
+## What we're looking for
 
-## What we’re looking for
-
-- Notes that are **kind** to a future reader
+- Notes that are **kind to a future reader**
 - Patterns that make the guild **more capable**
 - Maps that make the forest **less lonely**
-
