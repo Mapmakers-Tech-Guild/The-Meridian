@@ -10,7 +10,8 @@
     "check:links": "node scripts/check-links.mjs",
     "build:graph": "node scripts/build-kb-graph.mjs",
     "build:site": "npm run check:links && node scripts/vend-quartz.mjs && node scripts/ensure-quartz-cache-link.mjs && npm run build:graph && npx quartz build -d . -o public && node scripts/collect-meridian-assets.mjs",
-    "test:build": "node scripts/test-build.mjs"
+    "test:build": "node scripts/test-build.mjs",
+    "export:discord-links": "node scripts/export-discord-links.mjs"
   },
   "devDependencies": {
     "@jackyzha0/quartz": "github:jackyzha0/quartz#v4",
