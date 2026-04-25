@@ -7,8 +7,9 @@
   },
   "scripts": {
     "postinstall": "node scripts/vend-quartz.mjs && node scripts/ensure-quartz-cache-link.mjs",
+    "check:links": "node scripts/check-links.mjs",
     "build:graph": "node scripts/build-kb-graph.mjs",
-    "build:site": "node scripts/vend-quartz.mjs && node scripts/ensure-quartz-cache-link.mjs && npm run build:graph && npx quartz build -d . -o public && node scripts/collect-meridian-assets.mjs",
+    "build:site": "npm run check:links && node scripts/vend-quartz.mjs && node scripts/ensure-quartz-cache-link.mjs && npm run build:graph && npx quartz build -d . -o public && node scripts/collect-meridian-assets.mjs",
     "test:build": "node scripts/test-build.mjs"
   },
   "devDependencies": {
